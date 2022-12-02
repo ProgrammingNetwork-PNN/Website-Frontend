@@ -1,1 +1,1 @@
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/023ee866-5458-492e-85bd-0ae88a37fdfd/Untitled.png)
+![image](https://user-images.githubusercontent.com/111052779/205208737-ff9842f4-475f-4a97-8d54-4080a41c21c0.png)
