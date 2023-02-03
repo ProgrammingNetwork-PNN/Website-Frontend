@@ -5,6 +5,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import Grid from "@mui/material/Grid";
+import "./page.css";
 
 function SeminaPage() {
   const [cardTitle] = useState(["C/C++ Seminar", "JAVA Seminar", "DB Seminar"]);
@@ -15,16 +16,10 @@ function SeminaPage() {
   ]);
   return (
     <div>
-      <h1
-        style={{
-          textDecoration: "underline",
-          textUnderlinePosition: "under",
-        }}
-      >
-        정규 교과 과정 세미나
-      </h1>
-      <div style={{ paddingLeft: "45px" }}>
-        <Grid container spacing={2} style={{ borderRadius: "50" }}>
+      <h2 className="seminar">Seminar</h2>
+
+      <div style={{ paddingLeft: "10vh", paddingRight: "10vh" }}>
+        <Grid container spacing={1} style={{ borderRadius: "1000" }}>
           {messages.map((a, i) => {
             return (
               <Grid item xs={4} key={i}>
@@ -44,16 +39,22 @@ function SeminaPage() {
 
 function SeminarCard(props) {
   return (
-    <Card sx={{ maxWidth: 580 }}>
+    <Card sx={{ maxWidth: 520 }}>
       <CardActionArea>
         <CardMedia
           component="img"
-          height="400"
+          height="250"
           image={`${process.env.PUBLIC_URL}/images/seminar${props.i}.png`}
           alt={props.i}
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="div">
+          <Typography
+            className="cardTitle"
+            gutterBottom
+            variant="h5"
+            component="div"
+            fontSize="1rem"
+          >
             {props.cardTitle[props.i - 1]}
           </Typography>
           <Typography variant="body2" color="#444" fontSize={"18px"}>
