@@ -1,42 +1,30 @@
-
 @font-face {
     font-family: "Apple SD Gothic Neo";
     src: url('../../../../public/font/Apple\ SD\ Gothic\ Neo\ Bold.ttf');
 }
-html{
-    font-size: 200%;
-    padding-top: 0%;
-}
-
-html{
-  margin-top: 0;
-}
-body{
-  margin: 0;
-  margin-top: 0;
-}
-body>div{
-  margin: 0;
-  margin-top: 0;
-}
-
+html {
+		font-size: 18pt;
+		font-size: 1vmax;
+	}
+  
 .title {
     color: #222;
     text-align: left;
     padding-top: 5vh;
     padding-left: 1vh;
-    font-size: 60px;
+    font-size: 2vmax;
+    
 }
 
 .subTitle{
     white-space: pre-wrap;
     text-align: left;
-    font-size: 28px;
+    font-size: 2vmax;
 }
 .activity{
     font-family: "Apple SD Gothic Neo";
     text-align: center;
-    font-size: 28px;
+    font-size: 1.5vmax;
     text-decoration: underline;
     text-underline-position: under;
 }
@@ -80,12 +68,12 @@ video {
 .cardTitle{
     font-family: "Apple SD Gothic Neo";
     text-align: center;
-    font-size: 1rem;
+    font-size: 2vmax;
 }
 
 .text p {
   text-align: left;
-  font-size: 1rem;
+  font-size: 1.5vmax;
   color: #222;
   font-family: "Apple SD Gothic Neo";
 }
@@ -97,10 +85,9 @@ video {
   width: 100%;
   top: 85%;
   left: 0%;
-  font-size: 1rem;
+  font-size: 1.5vmax;
   font-family: "Apple SD Gothic Neo";
 }
-
 
 
 @media(max-width:767px) {
@@ -119,8 +106,8 @@ video {
   .text1 {
     top: 35%;
   }
-
   .card{
-    width: 40vh
+    
+    width: 40vh 
   }
 }

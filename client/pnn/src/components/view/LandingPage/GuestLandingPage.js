@@ -13,9 +13,9 @@ import {
   ScrollContainer,
   ScrollPage,
   batch,
-  FadeIn,
   MoveOut,
   Sticky,
+  Fade,
 } from "react-scroll-motion";
 
 const text =
@@ -46,10 +46,10 @@ function GuestLandingPage() {
     <div>
       <Intro></Intro>
       <ScrollContainer>
+        {/*snap="mandatory"*/}
         <></>
-
         <ScrollPage>
-          <Animator animation={batch(FadeIn(), Sticky(), MoveOut(0, 30))}>
+          <Animator animation={batch(Fade(), Sticky(), MoveOut(0, 20))}>
             <p className="activity">Activity</p>
 
             <div className="card">
@@ -57,7 +57,7 @@ function GuestLandingPage() {
                 <Grid container spacing={4}>
                   {card.map((a, i) => {
                     return (
-                      <Grid item lg={4} md={4} xs={12} key={i}>
+                      <Grid item lg={4} md={4} xs={4} key={i}>
                         <GuestCard cardTitle={cardTitle} img={img} i={i} />
                       </Grid>
                     );
@@ -66,6 +66,9 @@ function GuestLandingPage() {
               </Box>
             </div>
           </Animator>
+        </ScrollPage>
+        <ScrollPage>
+          <div style={{ lineHeight: "100vh" }}>끝</div>
         </ScrollPage>
       </ScrollContainer>
     </div>
@@ -97,9 +100,6 @@ function GuestCard(props) {
         />
         <CardContent>
           <p className="cardTitle">{props.cardTitle[props.i]}</p>
-          <Typography variant="body2" color="text.secondary">
-            --
-          </Typography>
         </CardContent>
       </CardActionArea>
     </Card>

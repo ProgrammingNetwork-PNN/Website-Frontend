@@ -78,7 +78,12 @@ function DrawerAppBar(props) {
       <CssBaseline />
       <Stack spacing={0} sx={{ flexGrow: 1 }}>
         <ThemeProvider theme={darkTheme}>
-          <AppBar component="nav" default style={{ borderRadius: 40 }}>
+          <AppBar
+            component="nav"
+            default
+            style={{ borderRadius: 40, backgroundColor: "#fff" }}
+            position="absolute"
+          >
             <Toolbar>
               <IconButton
                 color="inherit"

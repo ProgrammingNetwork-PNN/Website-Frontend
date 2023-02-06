@@ -1,12 +1,10 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-
 import NavBar from "./components/view/NavBar/NavBar";
 import GuestLandingPage from "./components/view/LandingPage/GuestLandingPage";
 import EtcPage from "./components/view/LandingPage/sections/EtcPage";
-import SeminaPage from "./components/view/LandingPage/sections/SeminaPage";
 import TeamProjectPage from "./components/view/LandingPage/sections/TeamProjectPage";
+import SeminaPage from "./components/view/LandingPage/sections/SeminaPage/SeminaPage";
 
 function App() {
   return (
