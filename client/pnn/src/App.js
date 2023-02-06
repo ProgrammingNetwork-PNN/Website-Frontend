@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
@@ -19,6 +19,7 @@ function App() {
         <Route path="/semina" element={<SeminaPage />}></Route>
         <Route path="/teamProject" element={<TeamProjectPage />}></Route>
         <Route path="/etc" element={<EtcPage />}></Route>
+
         <Route></Route>
       </Routes>
     </div>
