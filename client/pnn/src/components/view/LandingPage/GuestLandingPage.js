@@ -2,8 +2,13 @@ import React, { useState } from "react";
 import "./Landing.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Typography from "@mui/material/Typography";
+import {
+  RecordVoiceOverOutlined,
+  GroupsOutlined,
+  SchoolOutlined,
+  MoreHorizOutlined,
+} from "@mui/icons-material";
+//import RecordVoice, SpatialAudio
 import { CardActionArea } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
@@ -40,7 +45,7 @@ function Intro() {
 
 function GuestLandingPage() {
   const [img] = useState(["세미나.png", "coding.jpg", "onlineLecture.jpg"]);
-  const [cardTitle] = useState(["세미나", "팀프로젝트", "기타"]);
+  const [cardTitle] = useState(["세미나", "팀프로젝트", "기타(동아리 활동)"]);
   const [card] = useState(["semina", "team", "etc"]);
   return (
     <div>
@@ -68,7 +73,9 @@ function GuestLandingPage() {
           </Animator>
         </ScrollPage>
         <ScrollPage>
-          <div style={{ lineHeight: "100vh" }}>끝</div>
+          <div style={{ lineHeight: "100vh" }}>
+            끝, 부원 설명하면 좋을듯? && Footer 넣을까 말까 고민중...
+          </div>
         </ScrollPage>
       </ScrollContainer>
     </div>
@@ -92,12 +99,16 @@ function GuestCard(props) {
           }
         }}
       >
-        <CardMedia
-          component="img"
-          height="250"
-          image={`${process.env.PUBLIC_URL}/images/${props.img[props.i]}`}
-          alt="card"
-        />
+        {props.i === 0 ? (
+          <SchoolOutlined style={{ fontSize: "7vmax" }} />
+        ) : null}
+        {props.i === 1 ? (
+          <GroupsOutlined style={{ fontSize: "7vmax" }} />
+        ) : null}
+        {props.i === 2 ? (
+          <MoreHorizOutlined style={{ fontSize: "7vmax" }} />
+        ) : null}
+
         <CardContent>
           <p className="cardTitle">{props.cardTitle[props.i]}</p>
         </CardContent>
