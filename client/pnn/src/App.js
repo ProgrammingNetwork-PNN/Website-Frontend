@@ -2,8 +2,8 @@ import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/view/NavBar/NavBar";
 import GuestLandingPage from "./components/view/LandingPage/GuestLandingPage";
-import EtcPage from "./components/view/LandingPage/sections/EtcPage";
-import TeamProjectPage from "./components/view/LandingPage/sections/TeamProjectPage";
+import EtcPage from "./components/view/LandingPage/sections/EtcPage/EtcPage";
+import TeamProjectPage from "./components/view/LandingPage/sections/TeamProjectPage/TeamProjectPage";
 import SeminaPage from "./components/view/LandingPage/sections/SeminaPage/SeminaPage";
 
 function App() {
