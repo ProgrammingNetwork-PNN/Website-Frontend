@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Apple SD Gothic Neo";
+    src: url('../../../../../public/font/Apple\ SD\ Gothic\ Neo\ Bold.ttf');
+}
+
+
+
+.seminar{
+    font-family: "Apple SD Gothic Neo";
+    text-align: center;
+    font-size: 40px;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+
+.text{
+    white-space: pre-wrap;
+  text-align: center;
+  font-size: 1rem;
+  color: #222;
+  font-family: "Apple SD Gothic Neo";
+  
+}
+
+.cardTitle{
+    font-family: "Apple SD Gothic Neo";
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+
+@media(max-width:767px) {
+  .bg {
+    height: 100%;
+  }
+  video {
+    height: 100%;
+  }
+  .text {
+    top: 5%
+  }
+  .text p {
+    font-size: 24px;
+  }
+  .text1 {
+    top: 35%;
+  }
+
+  .card{
+    top: 20vh;
+    width: 40vh
+  }
+}
+
+
+
