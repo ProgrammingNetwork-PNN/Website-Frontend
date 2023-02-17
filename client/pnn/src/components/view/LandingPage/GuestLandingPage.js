@@ -109,8 +109,12 @@ function GuestCard(props) {
             navigate("/semina");
           } else if (props.i === 1) {
             navigate("/teamProject");
-          } else {
+          } else if (props.i === 2){
             navigate("/etc");
+          } else {
+            navigate(
+              "/etc2"
+            );
           }
         }}
       >
