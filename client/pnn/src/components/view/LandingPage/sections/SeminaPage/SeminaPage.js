@@ -12,11 +12,11 @@ function Semina() {
     "DB 세미나를 통하여 데이터베이스의\n설계와 기초원리를 배울 수 있습니다.",
   ]);
   return (
-    <div className="is-preload" ref={scrollRef} style={{ overflow: "auto" }}>
-      <div id="page-wrapper">
-        <div id="wrapper">
+    <div className="is-preload" ref={scrollRef} style={{ overflow: "auto"}}>
+      <div id="page-wrapper" style={{paddingTop: '3vmax', paddingBottom: '0.5vmax'}}>
+        <div id="wrapper" style={{height: "60%"}}>
           <section className="panel banner right">
-            <div className="content color0 span-3-75">
+            <div className="content color0 span-3-75" style={{border: '0'}}>
               <h1 className="major">
                 P&N <br />
                 Seminar
@@ -26,7 +26,7 @@ function Semina() {
 
           {/*****************************1******************************/}
           <section className="panel spotlight medium left">
-            <div className="content span-7">
+            <div className="content span-7" style={{border: '0'}}>
               <h2 className="major">C/C++ Seminar</h2>
               <img
                 width="469px"
@@ -39,7 +39,7 @@ function Semina() {
           </section>
           {/*****************************2******************************/}
           <section className="panel spotlight medium left">
-            <div className="content span-7">
+            <div className="content span-7" style={{border: '0'}}>
               <h2 className="major">JAVA Seminar</h2>
               <img
                 width="469px"
@@ -52,7 +52,7 @@ function Semina() {
           </section>
           {/*****************************3******************************/}
           <section className="panel spotlight medium left">
-            <div className="content span-6">
+            <div className="content span-6" style={{border: '0'}}>
               <h2 className="major">DB Seminar</h2>
               <img
                 width="469px"
