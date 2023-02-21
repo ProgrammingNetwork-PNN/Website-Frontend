@@ -1,6 +1,6 @@
 # 2022 P&N Website
 
-### Frontend Member
+### Frontend Member22
 
 이현수 18
 ![hellowo](https://user-images.githubusercontent.com/104980470/205496955-5f657fee-e0c2-4eed-8167-769fabb2d656.png)
