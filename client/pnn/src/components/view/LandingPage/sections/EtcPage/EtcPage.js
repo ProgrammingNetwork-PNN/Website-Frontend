@@ -1,8 +1,10 @@
 import "./EtcPage.css";
+import CardGroup from 'react-bootstrap/CardGroup';
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import Carousel from "react-bootstrap/Carousel";
+import Card from 'react-bootstrap/Card';
 import "./EtcPage.css";
 // Import Swiper styles
 import "swiper/css";
@@ -229,32 +231,51 @@ function EtcPage() {
             <br />
             <div className="room">
                 <h2>동아리 방 사용</h2>
+                {
+                    <CardGroup>
+                        <Card>
+                            <Card.Img variant="top" src="images\seminar2.png" style={{ height: "650px", width: "750px" }} />
+                            <Card.Body>
+                                <Card.Title>동아리방 사용 안내</Card.Title>
+                                <Card.Text>
+                                    < br />
+                                    <p>1. P&N 동아리 방은 122-A 입니다.</p> < br />
+                                    <p>2. 동아리 방 책꽂이에는 각 학년별로 사용할 수 있는 책이 있습니다.</p> < br />
+                                    <p>3. 동아리 방을 들어온 기준으로 왼쪽에는 냉장고와 여러 일회용품도 있습니다.</p> < br />
+                                    <p>(※음식 섭취 후 무조건 환기시키기)</p> < br />
+                                </Card.Text>
+                            </Card.Body>
 
-                {<Carousel fade>
-                    <Carousel.Item>
-                        <p>1. P&N 동아리 방은 122-A 입니다.</p>
-                        <p>2. 동아리 방 책꽂이에는 각 학년별로 사용할 수 있는 책이 있습니다.</p>
-                        <p>3. 동아리 방을 들어온 기준으로 왼쪽에는
-                            냉장고와 여러 일회용품도 있습니다.</p>
-                        <p>(※음식 섭취 후 무조건 환기시키기)</p>
-                        <Carousel.Caption>
-                            <h3>MT 및 오락 활동 안내</h3>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <p>1. P&N 동아리는 주로 1학기 중간 시험이 끝난 후 MT를 갑니다.</p>
-                        <p>2. 여러가지 방식을 통해 화합을 이룹니다.</p>
-                        <p>주로 컴퓨터 게임을 같이 하며 술도 많이 마신답니다 \^^/</p>
-                        <p>3. 여러 사람들의 의견을 모아 다른 활동 또한 추천 받습니다.</p>
-                        <Carousel.Caption>
-                            <h3>동아리 활동 안내</h3>
-                            <p>1. IU-together의 프로그램을 통해 튜터링을 하며 수많은 지식을 얻을 수 있습니다.</p>
-                            <p>2. 컴퓨터공학과 내 동아리들과 학술제를 통해 활동을 할 수 있습니다.</p>
-                            <p>※참고로 P&N은 2022년도 학술제 1위를 달성하였습니다!</p>
-                        </Carousel.Caption>
-                    </Carousel.Item>
-                </Carousel>
+                        </Card>
+                        <Card>
+                            <Card.Img variant="top" src="images\pnnPicture.jpg" style={{ height: "650px", width: "750px" }} />
+                            <Card.Body>
+                                <Card.Title> MT 및 오락 활동 안내< br /> </Card.Title>
+                                <Card.Text>
+                                    <p> 1. P&N 동아리는 주로 1학기 중간 시험이 끝난 후 MT를 갑니다.</p> < br />
+                                    <p> 2. 여러가지 방식을 통해 화합을 이룹니다. </p> < br />
+                                    <p> 주로 컴퓨터 게임을 같이 하며 술도 많이 마신답니다 \^^/</p> < br />
+                                    <p> 3. 여러 사람들의 의견을 모아 다른 활동 또한 추천 받습니다.</p> < br />
+                                </Card.Text>
+                            </Card.Body>
+
+                        </Card>
+                        <Card>
+                            <Card.Img variant="top" src="images/세미나.png" style={{ height: "650px", width: "750px" }} />
+                            <Card.Body>
+                                <Card.Title>동아리 활동 안내 < br /> </Card.Title>
+                                <Card.Text>
+                                    <p>1. IU-together의 프로그램을 통해 튜터링을 하며 수많은 지식을 얻을 수 있습니다.</p> < br />
+                                    <p>2. 컴퓨터공학과 내 동아리들과 학술제를 통해 활동을 할 수 있습니다.</p> < br />
+                                    <p>※참고로 P&N은 2022년도 학술제 1위를 달성하였습니다!</p> < br />
+                                </Card.Text>
+                            </Card.Body>
+
+                        </Card>
+                    </CardGroup>
                 }
+
+
             </div>
         </div>
     );
