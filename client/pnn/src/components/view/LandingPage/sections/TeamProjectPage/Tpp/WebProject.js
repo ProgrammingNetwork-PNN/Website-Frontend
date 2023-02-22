@@ -83,17 +83,18 @@ function AcademicProject() {
         <hr/>
           <Animator animation={batch(Move(0,2400),StickyIn(), FadeIn(), ZoomIn())}style={{fontSize:40, margin:"auto"}}>
           
-          <img src={process.env.PUBLIC_URL +"/images/team-skl/webImg1.png"} style={{width:300}} />
-          <img src={process.env.PUBLIC_URL +"/images/team-skl/webImg2.png"} style={{width:300}} /><br></br>
+          <img src={process.env.PUBLIC_URL +"/images/team-skl/webImg1.png"} style={{width:300, marginRight:10}} />
+          <img src={process.env.PUBLIC_URL +"/images/team-skl/webImg2.png"} style={{width:300,height:170}} /><br></br>
           <hr></hr>
-          <span>리액트와 스프링을 활용한 웹 개발</span>
+          <span>리액트와 스프링을 활용한 웹 개발</span><br/>
+          <span style={{fontSize:25}}>🐱‍🏍웹 개발과 서버 개발에 가장 흔히 사용되는 라이브러리 및 프레임워크</span>
           </Animator>
         </ScrollPage>
         <ScrollPage>
         <hr/>
           <Animator animation={batch(Move(0,2400),StickyIn(), FadeIn(), ZoomIn())} style={{fontSize:40}}>
           <img src={process.env.PUBLIC_URL +"/images/team-skl/webImg4.jpg"} style={{width:300}} />
-          <img src={process.env.PUBLIC_URL +"/images/team-skl/webImg5.png"} style={{width:300}} />
+          <img src={process.env.PUBLIC_URL +"/images/team-skl/webImg5.png"} style={{width:300,height:200, marginLeft:20}} />
           <br/> 
             <hr></hr>
           디스코드와 노션을 활용하여 회의 및 세미나 진행
