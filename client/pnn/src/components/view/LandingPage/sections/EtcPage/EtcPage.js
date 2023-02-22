@@ -16,8 +16,8 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 
 function EtcPage() {
     return (
-        <div className="wrap">
-            <div className="Lecture">
+        <div className="wrap" style={{ paddingLeft: "12vmax", paddingRight: "12vmax", }}>
+            <div className="Lecture" >
                 <h2>원하는 인터넷 강의</h2>
                 <Carousel fade>
                     <Carousel.Item>
@@ -234,7 +234,7 @@ function EtcPage() {
                 {
                     <CardGroup>
                         <Card>
-                            <Card.Img variant="top" src="images\seminar2.png" style={{ height: "650px", width: "750px" }} />
+                            <Card.Img variant="top" src="images\seminar2.png" style={{ height: "100%", width: "100%" }} />
                             <Card.Body>
                                 <Card.Title>동아리방 사용 안내</Card.Title>
                                 <Card.Text>
@@ -248,7 +248,7 @@ function EtcPage() {
 
                         </Card>
                         <Card>
-                            <Card.Img variant="top" src="images\pnnPicture.jpg" style={{ height: "650px", width: "750px" }} />
+                            <Card.Img variant="top" src="images\pnnPicture.jpg" style={{ height: "100%", width: "100%" }} />
                             <Card.Body>
                                 <Card.Title> MT 및 오락 활동 안내< br /> </Card.Title>
                                 <Card.Text>
@@ -261,7 +261,7 @@ function EtcPage() {
 
                         </Card>
                         <Card>
-                            <Card.Img variant="top" src="images/세미나.png" style={{ height: "650px", width: "750px" }} />
+                            <Card.Img variant="top" src="images/세미나.png" style={{ height: "100%", width: "100%" }} />
                             <Card.Body>
                                 <Card.Title>동아리 활동 안내 < br /> </Card.Title>
                                 <Card.Text>
