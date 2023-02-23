@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./css/fontawesome-all.min.css";
 import "./css/LandingMain.css";
 import "./css/noscript.css";
-import { useHorizontalScroll } from "./useSideScroll";
+import { useHorizontalScroll } from "./useSideScroll.js";
 
 function Semina() {
   const scrollRef = useHorizontalScroll();

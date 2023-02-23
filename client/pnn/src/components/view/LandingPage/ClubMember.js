@@ -3,7 +3,7 @@ import "./Landing.css";
 
 function ClubMember(props) {
     const [isCheck, setCheck] = useState(true);
-    const [member] = useState(["1학년 모집중!", "2학년", "3학년", "4학년"]);
+    const [member] = useState(["18학번", "19학번", "20학번", "21학번"]);
     return (
         <>
             <div
@@ -58,15 +58,41 @@ function MemberRect(props) {
         <>
             <p className="RectText">{props.member}</p>
             <hr />
-            {props.member == "1학년 모집중!" ? (
-                void 0
-            ) : (
+            {props.member == "18학번" ? (
                 <>
-                    <div className="Rectangle">홍길동</div>
-                    <br />
-                    <br />
-                    <br />
+                <div className="Rectangle" style={{width: '28vmax'}}>권승현 | 신민승 | 이재현 | 이현수 | 장보민 | 정대희 | 천예준</div>
+                <br/>
                 </>
+            ) : (
+                void 0
+            )}
+            {props.member == "19학번" ? (
+                <>
+                <div className="Rectangle" style={{width: '20vmax'}}>고동민 | 김재민 | 어정훈 | 정필교 | 최원석</div>
+                <br/>
+            </>
+                
+            ) : (
+                void 0
+            )}
+            
+            {props.member == "20학번" ? (
+                <>
+                <div className="Rectangle" style={{width: '16vmax'}}>이고은 | 이승훈 | 정민영 | 현지훈</div>
+                <br/>
+            </>
+                
+            ) : (
+                void 0
+            )}
+            {props.member == "21학번" ? (
+                <>
+                <div className="Rectangle" style={{width: '20vmax'}}>강민석 | 신수현 | 오유빈 | 이영채 | 이유진</div>
+                <br/>
+            </>
+                
+            ) : (
+                void 0
             )}
         </>
     );
