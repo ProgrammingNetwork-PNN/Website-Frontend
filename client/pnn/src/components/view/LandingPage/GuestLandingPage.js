@@ -20,7 +20,22 @@ import {
     MoveOut,
     Sticky,
     Fade,
+    FadeOut,
+    Move,
 } from "react-scroll-motion";
+
+import Carousel from "react-bootstrap/Carousel";
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper";
+import CardGroup from 'react-bootstrap/CardGroup';
+import Card2 from 'react-bootstrap/Card';
+import { height } from "@mui/system";
 
 
 const text =
@@ -45,17 +60,21 @@ function Intro() {
 
 function GuestLandingPage() {
     const [img] = useState(["세미나.png", "coding.jpg", "onlineLecture.jpg"]);
-    const [cardTitle] = useState(["세미나", "팀프로젝트", "기타(동아리 활동)"]);
+    const [cardTitle] = useState(["세미나", "팀프로젝트", "멤버 소개"]);
     const [card] = useState(["semina", "team", "etc"]);
     return (
         <div>
-            <Intro></Intro>
             <ScrollContainer>
+            <Intro></Intro>
+            <EtcPage />
+            
                 {/*snap="mandatory"*/}
                 <></>
-                <ScrollPage>
+                
+                               
+                <ScrollPage style={{height:500}}>
                     <Animator
-                        animation={batch(Fade(), Sticky(), MoveOut(0, 20))}
+                        animation={batch(Move(0,500),Fade(), Sticky(50,60), MoveOut(0, 20))}
                     >
                         <p className="activity">Activity</p>
 
@@ -84,19 +103,14 @@ function GuestLandingPage() {
                         </div>
                     </Animator>
                 </ScrollPage>
-                <ScrollPage>
-                    <ClubMember
-                        title="Member"
-                        content="This is a content"
-                    />
-                    <div style={{ lineHeight: "100vh" }}></div>
-                </ScrollPage>
             </ScrollContainer>
+
         </div>
     );
 }
 
 export default GuestLandingPage;
+
 
 function GuestCard(props) {
   let navigate = useNavigate();
@@ -109,7 +123,7 @@ function GuestCard(props) {
           } else if (props.i === 1) {
             navigate("/teamProject");
           } else if (props.i === 2){
-            navigate("/etc");
+            navigate("/member");
           } else {
             navigate(
               "/etc2"
@@ -135,93 +149,151 @@ function GuestCard(props) {
   );
 }
 
- function ClubMember(props) {
-     const [member] = useState(["18학번", "19학번", "20학번", "21학번"]);
-     return (
-         <>
-             <div
-                 // 간단하게 내부에 css스타일링
-                 style={{
-                     display: "flex",
-                     justifyContent: "space-between",
-                     alignItems: "center",
-                     padding: "10px",
-                     boxSizing: "border-box",
-                     backgroundColor: "#111",
-                     width: "100%",
-                     height: "60px",
-                     color: "#fff",
-                 }}
-             >
-                 <h1 style={{ fontSize: "2vmax" }}>{props.title}</h1>
-             </div>
-                 <p
-                     style={{
-                         margin: "0",
-                         backgroundColor: "#666",
-                         color: "#fff",
-                         padding: "10px",
-                     }}
-                 >
-                     {member.map((a, i) => {
-                         return (
-                             <>
-                                 <MemberRect member={member[i]} />
-                             </>
-                         );
-                     })}
-                 </p>
-         </>
-     );
- }
+function EtcPage() {
+    return (
+        <div className="wrap" style={{ paddingLeft: "9vmax", paddingRight: "9vmax", }}>
+            <div className="Lecture" >
+                <h2>원하는 인터넷 강의</h2>
+                <Carousel fade>
+                    <Carousel.Item>
+                        <img
+                            style={{ height: "33vmax", width: "30vmax" }}
+                            className="d-block w-100"
+                            src="images/React.png"
+                            alt="First slide"
+                        />
+                        <Carousel.Caption>
+                            <h3>React</h3>
+                            <p className="description">
+                                React 뿐만 아니라 Vue나 자바스크립트등 같이
+                                공부할수있습니다.
+                            </p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            style={{ height: "33vmax", width: "30vmax" }}
+                            className="d-block w-100"
+                            src="images/Spring.jpg"
+                            alt="Second slide"
+                        />
 
- function MemberRect(props) {
-     return (
-         <>
-             <p className="RectText">{props.member}</p>
-             <hr />
-             {props.member == "18학번" ? (
-                 <>
-                     <div className="Rectangle" style={{ width: "28vmax" }}>
-                         권승현 | 신민승 | 이재현 | 이현수 | 장보민 | 정대희 |
-                         천예준
-                     </div>
-                     <br />
-                 </>
-             ) : (
-                 void 0
-             )}
-             {props.member == "19학번" ? (
-                 <>
-                     <div className="Rectangle" style={{ width: "20vmax" }}>
-                         고동민 | 김재민 | 어정훈 | 정필교 | 최원석
-                     </div>
-                     <br />
-                 </>
-             ) : (
-                 void 0
-             )}
+                        <Carousel.Caption>
+                            <h3>Spring boot</h3>
+                            <p className="description">
+                                Spring 뿐만 아니라 django, Node.js 등 같이
+                                공부할수있습니다.{" "}
+                            </p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            style={{ height: "33vmax", width: "30vmax" }}
+                            className="d-block w-100"
+                            src="images/Study.jpg"
+                            alt="Third slide"
+                        />
 
-             {props.member == "20학번" ? (
-                 <>
-                     <div className="Rectangle" style={{ width: "16vmax" }}>
-                         이고은 | 이승훈 | 정민영 | 현지훈
-                     </div>
-                     <br />
-                 </>
-             ) : (
-                 void 0
-             )}
-             {props.member == "21학번" ? (
-                 <>
-                     <div className="Rectangle" style={{ width: "20vmax" }}>
-                         강민석 | 신수현 | 오유빈 | 이영채 | 이유진
-                     </div>
-                     <br />
-                 </>
-             ) : (
-                 void 0
-             )}
-         </>
-     );
- }
+                        <Carousel.Caption>
+                            <h3> 다른 개발언어를 배우고싶다면? </h3>
+                            <p className="description">
+                                팀장님에게 문의해주세요.
+                            </p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                </Carousel>
+            </div>
+            <br />
+            <br />
+            <div className="mt">
+                <h2>기타 활동</h2>
+                <div className="mt-element">
+                    <Swiper
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        pagination={{ clickable: true }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="mt2020"
+                    >
+                        <SwiperSlide>
+                            <img
+                                src={
+                                    process.env.PUBLIC_URL +
+                                    "/images/pnnPicture.jpg"
+                                }
+                                style = {{paddingTop: '3vmax',width: "27vmax", height: "15vmax"}}
+                                
+                            ></img>
+                        </SwiperSlide>
+                    </Swiper>
+                    MT활동
+                </div>
+                <div className="mt-element">
+                    <Swiper
+                        spaceBetween={30}
+                        centeredSlides={true}
+                        pagination={{ clickable: true }}
+                        navigation={true}
+                        modules={[Autoplay, Pagination, Navigation]}
+                        className="mt2021"
+                    >
+                        <SwiperSlide>
+                            <img
+                                src={process.env.PUBLIC_URL + "/images/1.PNG"}
+                                style = {{paddingTop: '3vmax',width: "27vmax", height: "15vmax"}}
+                            ></img>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <img
+                                src={process.env.PUBLIC_URL + "/images/2.PNG"}
+                                style = {{paddingTop: '3vmax',width: "27vmax", height: "15vmax"}}
+                            ></img>
+                        </SwiperSlide>
+                    </Swiper>
+                    튜터링 활동
+                </div>
+                
+            </div>
+            <br />
+            <br />
+            <div className="room">
+                <h2>기타 동아리 활동</h2>
+                {
+                    <CardGroup>
+                        <Card2>
+                            <Card2.Img variant="top" src="images\seminar2.png" style={{ margin: 'auto', height: "15vmax", width: "20vmax" }} />
+                            <Card2.Body>
+                                <Card2.Title className="description">동아리방 사용 안내</Card2.Title>
+                                <Card2.Text>
+                                    < br />
+                                    <span>1. P&N 동아리 방은 122-A 입니다.</span>
+                                    <br></br>
+                                    <span>2. 동아리 방 책꽂이에는 각 학년별로 사용할 수 있는 책이 있습니다.</span>
+                                    <br></br>
+                                    <span>3. 동아리 방을 들어온 기준으로 오른쪽에는 냉장고와 여러 일회용품도 있습니다.</span>
+                                </Card2.Text>
+                            </Card2.Body>
+
+                        </Card2>
+                        <Card2>
+                            <Card2.Img variant="top" src="images\pnnPicture.jpg" style={{ margin: 'auto', height: "15vmax", width: "30vmax" }} />
+                            <Card2.Body>
+                                <Card2.Title> MT 및 오락 활동 안내< br /> </Card2.Title>
+                                <Card2.Text>
+                                <span> 1. P&N 동아리는 주로 1학기 중간 시험이 끝난 후 MT를 갑니다.</span>
+                                    <br></br>
+                                    <span> 2. 여러가지 방식을 통해 화합을 이룹니다. </span>
+                                    <br></br>
+                                    <span> 3. 여러 사람들의 의견을 모아 다른 활동 또한 추천 받습니다.</span>
+                                </Card2.Text>
+                            </Card2.Body>
+                        </Card2>
+                    </CardGroup>
+                }
+
+
+            </div>
+        </div>
+    );
+}

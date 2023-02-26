@@ -5,12 +5,14 @@ import GuestLandingPage from "./components/view/LandingPage/GuestLandingPage.js"
 import EtcPage from "./components/view/LandingPage/sections/EtcPage/EtcPage.js";
 import TeamProjectPage from "./components/view/LandingPage/sections/TeamProjectPage/TeamProjectPage.js";
 import SeminaPage from "./components/view/LandingPage/sections/SeminaPage/SeminaPage.js";
+import MemberPage from "./components/view/LandingPage/sections/MemberPage/MemberPage.js";
 function App() {
     return (
         <div className="App">
+            
             <NavBar></NavBar>
-
             <Routes>
+            
                 <Route path="/" element={<GuestLandingPage />}></Route>{" "}
                 {/* 추후 path = "guest"로 바꿀 예정 */}
                 <Route path="/semina" element={<SeminaPage />}></Route>
@@ -19,6 +21,7 @@ function App() {
                     element={<TeamProjectPage />}
                 ></Route>
                 <Route path="/etc" element={<EtcPage />}></Route>
+                <Route path="/member" element={<MemberPage />}></Route>
             </Routes>
         </div>
     );

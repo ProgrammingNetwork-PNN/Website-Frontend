@@ -47,7 +47,7 @@ function EtcPage() {
                             <h3>Spring boot</h3>
                             <p className="description">
                                 Spring 뿐만 아니라 django, Node.js 등 같이
-                                공부할수있습니다.{" "}
+                                공부할수있습니다.
                             </p>
                         </Carousel.Caption>
                     </Carousel.Item>
@@ -131,9 +131,11 @@ function EtcPage() {
                                 <Card.Title className="description">동아리방 사용 안내</Card.Title>
                                 <Card.Text>
                                     < br />
-                                    <p >1. P&N 동아리 방은 122-A 입니다.</p>
-                                    <p >2. 동아리 방 책꽂이에는 각 학년별로 사용할 수 있는 책이 있습니다.</p>
-                                    <p >3. 동아리 방을 들어온 기준으로 오른쪽에는 냉장고와 여러 일회용품도 있습니다.</p>
+                                    <span>1. P&N 동아리 방은 122-A 입니다.</span>
+                                    <br></br>
+                                    <span>2. 동아리 방 책꽂이에는 각 학년별로 사용할 수 있는 책이 있습니다.</span>
+                                    <br></br>
+                                    <span>3. 동아리 방을 들어온 기준으로 오른쪽에는 냉장고와 여러 일회용품도 있습니다.</span>
                                 </Card.Text>
                             </Card.Body>
 
@@ -143,9 +145,11 @@ function EtcPage() {
                             <Card.Body>
                                 <Card.Title> MT 및 오락 활동 안내< br /> </Card.Title>
                                 <Card.Text>
-                                    <p> 1. P&N 동아리는 주로 1학기 중간 시험이 끝난 후 MT를 갑니다.</p>
-                                    <p> 2. 여러가지 방식을 통해 화합을 이룹니다. </p>
-                                    <p> 3. 여러 사람들의 의견을 모아 다른 활동 또한 추천 받습니다.</p>
+                                    <span> 1. P&N 동아리는 주로 1학기 중간 시험이 끝난 후 MT를 갑니다.</span>
+                                    <br></br>
+                                    <span> 2. 여러가지 방식을 통해 화합을 이룹니다. </span>
+                                    <br></br>
+                                    <span> 3. 여러 사람들의 의견을 모아 다른 활동 또한 추천 받습니다.</span>
                                 </Card.Text>
                             </Card.Body>
                         </Card>
