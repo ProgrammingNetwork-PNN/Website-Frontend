@@ -24,7 +24,7 @@ import {
 
 
 const text =
-    "Programming을 즐기는 네트워크라는 뜻을 가진 \n인제대학교 컴퓨터공학부 학술 동아리입니다.";
+    "Programming을 즐기는 Network라는 뜻을 가진 \n인제대학교 컴퓨터공학부 학술 동아리입니다.";
 
 function Intro() {
     return (
@@ -86,7 +86,7 @@ function GuestLandingPage() {
                 </ScrollPage>
                 <ScrollPage>
                     <ClubMember
-                        title="Club Member"
+                        title="Member"
                         content="This is a content"
                     />
                     <div style={{ lineHeight: "100vh" }}></div>
@@ -136,7 +136,6 @@ function GuestCard(props) {
 }
 
  function ClubMember(props) {
-     const [isCheck, setCheck] = useState(true);
      const [member] = useState(["18학번", "19학번", "20학번", "21학번"]);
      return (
          <>
@@ -155,15 +154,7 @@ function GuestCard(props) {
                  }}
              >
                  <h1 style={{ fontSize: "2vmax" }}>{props.title}</h1>
-                 <button
-                     onClick={() => {
-                         setCheck((e) => !e);
-                     }}
-                 >
-                     {isCheck ? "-" : "+"}
-                 </button>
              </div>
-             {isCheck && (
                  <p
                      style={{
                          margin: "0",
@@ -180,7 +171,6 @@ function GuestCard(props) {
                          );
                      })}
                  </p>
-             )}
          </>
      );
  }
