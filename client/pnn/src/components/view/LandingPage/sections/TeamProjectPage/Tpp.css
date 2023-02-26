@@ -1,3 +1,13 @@
+/*
+글꼴 Noto Sans
+글꼴 크기 기준 16 large 20 small 12
+색상 #61dafb
+*/
+
+*{
+  font-family: "Apple SD Gothic Neo";
+}
+
 .headerbgimg{
     width:auto;
     height: auto;
@@ -107,7 +117,19 @@ hr{
 .imgTeamLogo{
   width: 30%;
   height: 50%;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.imgTeamLogos{
+  width: 27%;
+  height: 40%;
  
   margin-bottom: 10px;
+  margin-top: 10px;
+}.imgTeamLogoslack{
+  width: 27%;
+  height: 40%;
+ 
+  margin-bottom: 15px;
   margin-top: 10px;
 }
