@@ -16,6 +16,8 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Stack from "@mui/material/Stack";
+import "./NavBar.css"
+import { NavLink } from "react-router-dom";
 
 const drawerWidth = 240;
 /*const navItems = ["로그인", "회원가입"];*/
@@ -74,6 +76,7 @@ function DrawerAppBar(props) {
     window !== undefined ? () => window().document.body : undefined;
 
   return (
+    <nav>
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <Stack spacing={0} sx={{ flexGrow: 1 }}>
@@ -102,7 +105,11 @@ function DrawerAppBar(props) {
                 fontSize="26px"
                 sx={{ flexGrow: 1, display: { xs: "none", sm: "block" } }}
               >
-                Guest
+                <NavLink to="/">
+                <img 
+                style={{ height: "3vmax", width: "5vmax" }}
+                src={process.env.PUBLIC_URL + "/images/Team-skl/pnnLogo.png"} alt = "navLogo"
+                ></img></NavLink>
               </Typography>
               <Box sx={{ display: { xs: "none", sm: "block" } }}>
                 {navItems.map((item) => (
@@ -139,6 +146,7 @@ function DrawerAppBar(props) {
         </ThemeProvider>
       </Stack>
     </Box>
+    </nav>
   );
 }
 

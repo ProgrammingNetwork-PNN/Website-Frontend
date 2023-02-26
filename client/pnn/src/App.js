@@ -8,9 +8,10 @@ import SeminaPage from "./components/view/LandingPage/sections/SeminaPage/Semina
 function App() {
     return (
         <div className="App">
+            
             <NavBar></NavBar>
-
             <Routes>
+            
                 <Route path="/" element={<GuestLandingPage />}></Route>{" "}
                 {/* 추후 path = "guest"로 바꿀 예정 */}
                 <Route path="/semina" element={<SeminaPage />}></Route>
