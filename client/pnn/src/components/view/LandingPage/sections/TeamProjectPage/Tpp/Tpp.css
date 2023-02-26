@@ -3,7 +3,9 @@
 글꼴 크기 기준 16 large 20 small 12
 색상 #61dafb
 */
-
+*{
+  font-family: "Apple SD Gothic Neo";
+}
 .container{
        
     display: grid;
@@ -31,7 +33,7 @@
     
 }
 .titleImg{
-    font-family: 'Noto Sans';
+    
     font-weight: bold;
     font-size: 60px;
     margin-top: 30px;
@@ -69,7 +71,7 @@
 
 .frame{
 
-  font-family: 'Noto Sans';
+  
   font-size: 20px;
   font-weight: bold;
   margin-top: 20px;
