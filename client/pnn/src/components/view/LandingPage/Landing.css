@@ -32,6 +32,7 @@ html {
 .card{
     width: 150vh;
     border: none;
+    background-image: url("../../../../public/images/overlay.png");
 }
 
 

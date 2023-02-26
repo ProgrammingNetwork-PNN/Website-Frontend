@@ -60,7 +60,7 @@ function GuestLandingPage() {
                         <p className="activity">Activity</p>
 
                         <div className="card">
-                            <Box sx={{ flexGrow: 3 }}>
+                            <Box>
                                 <Grid container spacing={4}>
                                     {card.map((a, i) => {
                                         return (
