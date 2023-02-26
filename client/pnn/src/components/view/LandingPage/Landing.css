@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 *{
   font-family: "Apple SD Gothic Neo";
 }
+=======
+
+>>>>>>> f7c5ddaabf778f7f552295f7684c3d2391e01c51
 html {
 		font-size: 18pt;
 		font-size: 1vmax;
@@ -21,7 +25,7 @@ html {
     font-size: 2vmax;
 }
 .activity{
-    font-family: "Apple SD Gothic Neo";
+    font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
     text-align: center;
     font-size: 1.5vmax;
     text-decoration: underline;
@@ -30,8 +34,8 @@ html {
 
 .card{
     width: 150vh;
-    padding-left: 4vh;
-    padding-right: 4vh;
+    border: none;
+    background-image: url("../../../../public/images/overlay.png");
 }
 
 
@@ -61,11 +65,11 @@ video {
   letter-spacing: 3.5px;
   transform: translate(0%,0%);
   
-  font-family: "Apple SD Gothic Neo";
+  font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
 }
 
 .cardTitle{
-    font-family: "Apple SD Gothic Neo";
+    font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
     text-align: center;
     font-size: 2vmax;
 }
@@ -74,7 +78,7 @@ video {
   text-align: left;
   font-size: 1.5vmax;
   color: #222;
-  font-family: "Apple SD Gothic Neo";
+  font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
 }
 
 .text1 {
@@ -85,7 +89,7 @@ video {
   top: 85%;
   left: 0%;
   font-size: 1.5vmax;
-  font-family: "Apple SD Gothic Neo";
+  font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
 }
 
 
@@ -102,7 +106,7 @@ video {
 }
 /* Rectangle 32 */
 .RectText{
-  font-family: "Apple SD Gothic Neo";
+  font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
   font-weight: 500;
   text-align: left;
   font-size: 1.5vmax;

@@ -14,7 +14,6 @@ import SwiperCore, {
 } from "swiper";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 function TeamProjectPage() {
- 
   const FadeUp = batch(Fade(), Move(), Sticky());
   return (
       <ScrollContainer>
@@ -32,7 +31,7 @@ function TeamProjectPage() {
             <span style={{fontSize:28}}>2017 학술제 1등작🥇<br/></span>
              <img src={process.env.PUBLIC_URL +"/images/team-skl/2017.png"} className="imgTeamProjet">
           </img><br/>
-          InJe Campus Life
+          P&N 
            <hr/>
            <span style={{fontSize:25}}>인제대 학생을 위한 <br/>정보제공 안드로이드 앱</span>
             
