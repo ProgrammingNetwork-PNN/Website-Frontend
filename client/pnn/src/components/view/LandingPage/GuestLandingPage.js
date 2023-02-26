@@ -72,11 +72,10 @@ function GuestLandingPage() {
                 <></>
                 
                                
-                <ScrollPage style={{height:1500}}>
+                <ScrollPage style={{height:2000}}>
                     <Animator
                         animation={batch(Move(),Fade(), Sticky(50,60), MoveOut(0, 0))}
                     >
-                        <p className="activity">Activity</p>
 
                         <div className="card">
                             <Box>
@@ -154,6 +153,7 @@ function EtcPage() {
         <div className="wrap" style={{ paddingLeft: "9vmax", paddingRight: "9vmax", }}>
             <br />
             <br />
+            <p className="activity">Activity</p>
             <div className="mt">
                
                 
