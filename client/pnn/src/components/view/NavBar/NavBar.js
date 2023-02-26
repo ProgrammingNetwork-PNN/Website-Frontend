@@ -107,7 +107,7 @@ function DrawerAppBar(props) {
               >
                 <NavLink to="/">
                 <img 
-                style={{ height: "3vmax", width: "5vmax" }}
+                style={{ height: "2.2vmax", width: "5vmax" }}
                 src={process.env.PUBLIC_URL + "/images/Team-skl/pnnLogo.png"} alt = "navLogo"
                 ></img></NavLink>
               </Typography>
