@@ -31,8 +31,7 @@ html {
 
 .card{
     width: 150vh;
-    padding-left: 4vh;
-    padding-right: 4vh;
+    border: none;
 }
 
 
