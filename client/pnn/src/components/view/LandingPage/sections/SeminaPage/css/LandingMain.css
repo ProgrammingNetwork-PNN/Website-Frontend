@@ -1911,6 +1911,8 @@
 		flex-shrink: 1;
 		height: 100%;
 		padding: 5rem;
+
+		
 	}
 
 		@media screen and (orientation: portrait) {
@@ -1958,10 +1960,7 @@
 /* Wrapper */
 
 	#wrapper {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
+		display: float;
 		-moz-flex-direction: row;
 		-webkit-flex-direction: row;
 		-ms-flex-direction: row;
