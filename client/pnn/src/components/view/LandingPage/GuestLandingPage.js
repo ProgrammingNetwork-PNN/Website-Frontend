@@ -6,6 +6,7 @@ import {
     GroupsOutlined,
     SchoolOutlined,
     MoreHorizOutlined,
+    TagRounded
 } from "@mui/icons-material";
 //import RecordVoice, SpatialAudio
 import { CardActionArea } from "@mui/material";
@@ -154,10 +155,44 @@ function EtcPage() {
             <br />
             <br />
             <p className="activity">Activity</p>
-            
+            <br></br>
+            <br></br>
             <h1>오직 122-A에서만..!</h1>
             <br />
             <br />
+            <br></br>
+
+            <div className="senpai">
+                <img 
+                src={process.env.PUBLIC_URL + "/images/index.png"} 
+                className="index" 
+                style={{width:"22vmax", height:"4vmax"}} >
+
+                </img>
+                <span className="imgText"><img src={process.env.PUBLIC_URL + "/images/hash.png"} width={35} height={35}></img>&nbsp;든든한_선배들</span>
+            </div>
+            <br></br><br></br>
+            <div className="senpai">
+                <img 
+                src={process.env.PUBLIC_URL + "/images/index.png"} 
+                className="index" 
+                style={{width:"22vmax", height:"4vmax"}} >
+
+                </img>
+                <span className="imgText"><img src={process.env.PUBLIC_URL + "/images/hash.png"} width={35} height={35}></img>&nbsp;걱정없는_대학생활</span>
+            </div>
+            <br></br><br></br>
+            <div className="senpai">
+                <img 
+                src={process.env.PUBLIC_URL + "/images/index.png"} 
+                className="index" 
+                style={{width:"22vmax", height:"4vmax"}} >
+
+                </img>
+                <span className="imgText"><img src={process.env.PUBLIC_URL + "/images/hash.png"} width={35} height={35}></img>&nbsp;PNN_PREMIUM</span>
+            </div>
+            <br></br><br></br>
+            
             <div className="room">
 
                 {
