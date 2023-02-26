@@ -72,7 +72,7 @@ function GuestLandingPage() {
                 <></>
                 
                                
-                <ScrollPage style={{height:2000}}>
+                <ScrollPage style={{height:3000}}>
                     <Animator
                         animation={batch(Move(),Fade(), Sticky(50,60), MoveOut(0, 0))}
                     >
@@ -154,10 +154,8 @@ function EtcPage() {
             <br />
             <br />
             <p className="activity">Activity</p>
-            <div className="mt">
-               
-                
-            </div>
+            
+            <h1>오직 122-A에서만..!</h1>
             <br />
             <br />
             <div className="room">

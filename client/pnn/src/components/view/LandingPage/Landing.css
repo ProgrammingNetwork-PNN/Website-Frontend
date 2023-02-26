@@ -143,30 +143,10 @@ video {
   padding-right: 4vh;
 }
 
-h2 {
+h1 {
   color: Black !important;
 }
 
-/* 가로 스크롤 적용 */
-.mt {
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.mt-element {
-  display: inline-block;
-  width: 500px;
-  height: 500px;
-  background: #fff;
-  font-size: 16px;
-  align-items: center;
-  line-height: 50px;
-  overflow: hidden;
-}
-
-.mt-element+.mt-element {
-  margin-left: 15px;
-}
 
 .swiper {
   width: 100%;
