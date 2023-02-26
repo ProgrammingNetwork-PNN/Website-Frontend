@@ -1,15 +1,11 @@
-@font-face {
-  font-family: "Apple SD Gothic Neo";
-  src: url("../../../../../../public/font/Apple\ SD\ Gothic\ Neo\ Bold.ttf");
-}
 
 .description{
-  font-family: "Apple SD Gothic Neo";
+  font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
   font-size: 1.5vmax;
 }
 
 .wrap {
-  font-family: "Apple SD Gothic Neo";
+  font-family: 'AppleSDGothicNeo', 'Noto Sans KR', sans-serif;
   margin: 50px auto;
   white-space: pre-wrap;
   background: #f8f8f8;
