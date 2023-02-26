@@ -73,7 +73,7 @@ function TeamProjectPage() {
           </Animator>
         </ScrollPage>
         <ScrollPage>
-          <Animator  animation={batch(Move(0,800),Sticky(),Fade())}>
+          <Animator  animation={batch(Move(0,800),Sticky(50,30))}>
             <span style={{fontSize:30}}>How build it?</span>
           
           
@@ -82,14 +82,17 @@ function TeamProjectPage() {
         </ScrollPage>
         <ScrollPage>
           <Animator  animation={batch(Move(0,800),Sticky(50,50),Fade())}>
+          
+          
           <img src={process.env.PUBLIC_URL +"/images/team-skl/logoReact.png"} className="imgTeamLogo"/>
-          <img src={process.env.PUBLIC_URL +"/images/team-skl/logoFlutter.png"} className="imgTeamLogo"/>
-          <img src={process.env.PUBLIC_URL +"/images/team-skl/logoUnity.png"} className="imgTeamLogo"/>
+          <img src={process.env.PUBLIC_URL +"/images/team-skl/logoSpring.png"} className="imgTeamLogos"/>
+          <img src={process.env.PUBLIC_URL +"/images/team-skl/logoUnity.png"} className="imgTeamLogos"/>
           <span style={{fontSize:25}}><br/>리액트 플루터 유니티를 활용한<br/> 웹 앱 게임 개발</span>
           <hr/>
           <img src={process.env.PUBLIC_URL +"/images/team-skl/logoNotion.png"} className="imgTeamLogo"/>
+          <img src={process.env.PUBLIC_URL +"/images/team-skl/logoSlack.png"} className="imgTeamLogoslack"/>
           <img src={process.env.PUBLIC_URL +"/images/team-skl/logoGit.png"} className="imgTeamLogo"/>
-          <img src={process.env.PUBLIC_URL +"/images/team-skl/logoDiscord.png"} className="imgTeamLogo"/>
+          
           <span style={{fontSize:25}}><br/>실무에서 활용되는 <br/> 노션 깃허브 디스코드를 통한 협업</span>
           </Animator>
         
