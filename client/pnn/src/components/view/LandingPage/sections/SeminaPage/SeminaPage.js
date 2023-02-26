@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import "./css/LandingMain.css";
 import "swiper/swiper.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import Carousel from "react-bootstrap/Carousel";
 import {
     Animator,
     ScrollContainer,
@@ -13,6 +15,7 @@ import {
 } from "react-scroll-motion";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
@@ -41,7 +44,6 @@ function Semina() {
                     </div>
                 </Animator>
             </ScrollPage>
-
             <div style={{ alignItems: "center", paddingTop: "3vmax" }}>
                 전공 세미나
             </div>
@@ -62,15 +64,32 @@ function Semina() {
                         />
                     </div>
 
-                    <img
-                        width="469px"
-                        height="350px"
-                        src={`${process.env.PUBLIC_URL}/images/seminar1.png`}
-                    />
+                    <Carousel fade Autoplay>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloC.png`}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloCPP.png`}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/seminar1.png`}
+                                alt="Third slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
                 </div>
                 <p className="myPFont">{messages[0]}</p>
             </section>
-
             {/*전공 2*/}
             <section style={{ paddingTop: "2vmax" }}>
                 <div style={{ border: "0" }}>
@@ -90,9 +109,10 @@ function Semina() {
                 </div>
                 <p className="myPFont">{messages[1]}</p>
             </section>
-
-            <hr />
-
+            <br />
+            <br />
+            <br />
+            <MoreVertIcon />
             <div style={{ alignItems: "center", paddingTop: "3vmax" }}>
                 개발 세미나
             </div>
@@ -120,15 +140,25 @@ function Semina() {
                         />
                     </div>
 
-                    <img
-                        width="469px"
-                        height="350px"
-                        src={`${process.env.PUBLIC_URL}/images/seminar1.png`}
-                    />
+                    <Carousel fade Autoplay>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloDB.png`}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/seminar3.png`}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
                 </div>
                 <p className="myPFont">{messages[0]}</p>
             </section>
-
             {/*개발 2*/}
             <section style={{ paddingTop: "2vmax" }}>
                 <div style={{ border: "0" }}>
