@@ -28,7 +28,6 @@ function Semina() {
             <ScrollPage
                 style={{ backgroundColor: "cornflowerblue", color: "white" }}
             >
-                <a name="test" />
                 <Animator
                     animation={batch(
                         Move(0, 500),
@@ -43,52 +42,112 @@ function Semina() {
                 </Animator>
             </ScrollPage>
 
-            {/*****************************1******************************/}
-            <section className="panel spotlight medium left">
-                <div className="content span-7" style={{ border: "0" }}>
-                    <h2 className="major">C/C++ Seminar</h2>
+            <div style={{ alignItems: "center", paddingTop: "3vmax" }}>
+                전공 세미나
+            </div>
+            {/*전공 1*/}
+            <section style={{ paddingTop: "2vmax" }}>
+                <div style={{ border: "0" }}>
+                    <div style={{ paddingBottom: "2vmax" }}>
+                        <img
+                            width="100vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/c_logo.png`}
+                        />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img
+                            width="100vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/cpp_logo.png`}
+                        />
+                    </div>
+
                     <img
                         width="469px"
                         height="350px"
                         src={`${process.env.PUBLIC_URL}/images/seminar1.png`}
-                    ></img>
+                    />
                 </div>
-            </section>
-            <p className="myPFont">{messages[0]}</p>
-            {/*****************************2******************************/}
-            <section className="panel spotlight medium left">
-                <div className="content span-7" style={{ border: "0" }}>
-                    <h2 className="major">JAVA Seminar</h2>
-                    <img
-                        width="469px"
-                        height="350px"
-                        src={`${process.env.PUBLIC_URL}/images/seminar2.png`}
-                    ></img>
-                </div>
-                <div
-                    className="image filtered tinted"
-                    data-position="top "
-                ></div>
-                <p className="myPFont">{messages[1]}</p>
-            </section>
-            {/*****************************3******************************/}
-            <section className="panel spotlight medium left">
-                <div className="content span-6" style={{ border: "0" }}>
-                    <h2 className="major">DB Seminar</h2>
-                    <img
-                        width="469px"
-                        height="350px"
-                        src={`${process.env.PUBLIC_URL}/images/seminar3.png`}
-                    ></img>
-                </div>
-                <div
-                    className="image filtered tinted"
-                    data-position="top "
-                ></div>
-                <p className="myPFont">{messages[2]}</p>
+                <p className="myPFont">{messages[0]}</p>
             </section>
 
-            <section style={{ paddingLeft: "20px" }}></section>
+            {/*전공 2*/}
+            <section style={{ paddingTop: "2vmax" }}>
+                <div style={{ border: "0" }}>
+                    <div style={{ paddingBottom: "2vmax" }}>
+                        <img
+                            width="160vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/java_logo.png`}
+                        />
+                    </div>
+
+                    <img
+                        width="469px"
+                        height="350px"
+                        src={`${process.env.PUBLIC_URL}/images/seminar1.png`}
+                    />
+                </div>
+                <p className="myPFont">{messages[1]}</p>
+            </section>
+
+            <hr />
+
+            <div style={{ alignItems: "center", paddingTop: "3vmax" }}>
+                개발 세미나
+            </div>
+            {/*개발 1*/}
+            <section style={{ paddingTop: "2vmax" }}>
+                <div style={{ border: "0" }}>
+                    <div style={{ paddingBottom: "2vmax" }}>
+                        <img
+                            width="178vmax"
+                            height="70vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/mongo_logo.png`}
+                        />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img
+                            width="150vmax"
+                            height="80vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/mysql_logo.png`}
+                            style={{ paddingBottom: "0.75vmax" }}
+                        />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img
+                            width="150vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/oracle_logo.png`}
+                        />
+                    </div>
+
+                    <img
+                        width="469px"
+                        height="350px"
+                        src={`${process.env.PUBLIC_URL}/images/seminar1.png`}
+                    />
+                </div>
+                <p className="myPFont">{messages[0]}</p>
+            </section>
+
+            {/*개발 2*/}
+            <section style={{ paddingTop: "2vmax" }}>
+                <div style={{ border: "0" }}>
+                    <div style={{ paddingBottom: "2vmax" }}>
+                        <img
+                            width="200vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/github_logo.png`}
+                        />
+                    </div>
+
+                    <img
+                        width="469px"
+                        height="350px"
+                        src={`${process.env.PUBLIC_URL}/images/seminar1.png`}
+                    />
+                </div>
+                <p className="myPFont">{messages[0]}</p>
+            </section>
         </ScrollContainer>
     );
 }

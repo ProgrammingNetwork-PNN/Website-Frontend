@@ -1,13 +1,3 @@
-/*
-글꼴 Noto Sans
-글꼴 크기 기준 16 large 20 small 12
-색상 #61dafb
-*/
-
-*{
-  font-family: "Apple SD Gothic Neo";
-}
-
 .headerbgimg{
     width:auto;
     height: auto;

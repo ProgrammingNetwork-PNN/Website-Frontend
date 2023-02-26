@@ -36,6 +36,7 @@ function TeamProjectPage() {
             <ScrollPage
                 style={{ backgroundColor: "cornflowerblue", color: "white" }}
             >
+                <a name="test" />
                 <Animator
                     animation={batch(
                         Move(0, 500),
@@ -44,7 +45,7 @@ function TeamProjectPage() {
                         MoveOut(0, -400)
                     )}
                 >
-                    <div style={{ fontSize: 30 }}>
+                    <div style={{ fontSize: 40 }}>
                         P & N <hr></hr>프로젝트 소개
                     </div>
                 </Animator>
@@ -53,7 +54,7 @@ function TeamProjectPage() {
             <ScrollPage>
                 <Animator
                     animation={batch(Move(0, 800), Sticky(), Fade())}
-                    style={{ fontSize: 40, margin: "auto" }}
+                    style={{ fontSize: 30, margin: "auto" }}
                 >
                     <span style={{ fontSize: 28 }}>
                         2017 학술제 1등작🥇
@@ -66,7 +67,7 @@ function TeamProjectPage() {
                         className="imgTeamProjet"
                     ></img>
                     <br />
-                    P&N
+                    Inje Campus Life
                     <hr />
                     <span style={{ fontSize: 25 }}>
                         인제대 학생을 위한 <br />
@@ -77,7 +78,7 @@ function TeamProjectPage() {
             <ScrollPage>
                 <Animator
                     animation={batch(Move(0, 800), Sticky(), Fade())}
-                    style={{ fontSize: 40, margin: "auto" }}
+                    style={{ fontSize: 30, margin: "auto" }}
                 >
                     <span style={{ fontSize: 28 }}>
                         2018 학술제 1등작🥇
@@ -100,7 +101,7 @@ function TeamProjectPage() {
             <ScrollPage>
                 <Animator
                     animation={batch(Move(0, 800), Sticky(), Fade())}
-                    style={{ fontSize: 40, margin: "auto" }}
+                    style={{ fontSize: 30, margin: "auto" }}
                 >
                     <span style={{ fontSize: 28 }}>
                         2019 학술제 1등작🥇
@@ -113,12 +114,15 @@ function TeamProjectPage() {
                         className="imgTeamProjetStudio"
                     ></img>
                     <br />
-                    <div className="marsGradation">MARS</div>
-                    PROJECT
+                    <div
+                        className="marsGradation"
+                        style={{ marginTop: -25, marginBottom: 15 }}
+                    >
+                        MARS
+                    </div>
+                    <span style={{ fontSize: 30 }}> Manage AR System</span>
                     <hr />
                     <span style={{ fontSize: 25 }}>
-                        Manage AR System
-                        <br />
                         증강현실 개발 및<br /> AR 웹 서비스 연구
                     </span>
                 </Animator>
@@ -127,25 +131,84 @@ function TeamProjectPage() {
             <ScrollPage>
                 <Animator
                     animation={batch(Move(0, 800), Sticky(), Fade())}
-                    style={{ fontSize: 40, margin: "auto" }}
+                    style={{ fontSize: 30, margin: "auto" }}
                 >
-                    <span style={{ fontSize: 28 }}>
-                        2022 학술제 1등작🥇
+                    <div>
+                        <span style={{ fontSize: 28, height: "50%" + 50 }}>
+                            2022 학술제 1등작🥇
+                            <br />
+                        </span>
+                        <img
+                            src={
+                                process.env.PUBLIC_URL +
+                                "/images/team-skl/2022.png"
+                            }
+                            className="imgTeamProjetStudio"
+                        ></img>
                         <br />
-                    </span>
+                        <div>P&N Shooter</div>
+                        <hr />
+                        <span style={{ fontSize: 25 }}>
+                            VR 기기를 이용한 FPS 게임 개발
+                        </span>
+                    </div>
+                </Animator>
+            </ScrollPage>
+            <ScrollPage>
+                <Animator animation={batch(Move(0, 800), Sticky(), Fade())}>
+                    <span style={{ fontSize: 30 }}>How build it?</span>
                     <img
                         src={
-                            process.env.PUBLIC_URL + "/images/team-skl/2022.png"
+                            process.env.PUBLIC_URL +
+                            "/images/team-skl/logoReact.png"
                         }
-                        className="imgTeamProjetStudio"
-                    ></img>
-                    <br />
-                    <div>P&N Shooter</div>
-                    <hr />
+                        className="imgTeamLogo"
+                    />
+                    <img
+                        src={
+                            process.env.PUBLIC_URL +
+                            "/images/team-skl/logoFlutter.png"
+                        }
+                        className="imgTeamLogo"
+                    />
+                    <img
+                        src={
+                            process.env.PUBLIC_URL +
+                            "/images/team-skl/logoUnity.png"
+                        }
+                        className="imgTeamLogo"
+                    />
                     <span style={{ fontSize: 25 }}>
-                        VR 기기를 이용한 게임 개발
                         <br />
-                        동아리방에서 함께 즐겨요
+                        리액트 플루터 유니티를 활용한
+                        <br /> 웹 앱 게임 개발
+                    </span>
+                    <hr />
+                    <img
+                        src={
+                            process.env.PUBLIC_URL +
+                            "/images/team-skl/logoNotion.png"
+                        }
+                        className="imgTeamLogo"
+                    />
+                    <img
+                        src={
+                            process.env.PUBLIC_URL +
+                            "/images/team-skl/logoGit.png"
+                        }
+                        className="imgTeamLogo"
+                    />
+                    <img
+                        src={
+                            process.env.PUBLIC_URL +
+                            "/images/team-skl/logoDiscord.png"
+                        }
+                        className="imgTeamLogo"
+                    />
+                    <span style={{ fontSize: 25 }}>
+                        <br />
+                        실무에서 활용되는 <br /> 노션 깃허브 디스코드를 통한
+                        협업
                     </span>
                 </Animator>
             </ScrollPage>
