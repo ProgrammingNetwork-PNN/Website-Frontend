@@ -21,7 +21,7 @@ import {
 } from "react-scroll-motion";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import { RxDotFilled } from "react-icons/rx";
 import SwiperCore, {
     Autoplay,
     Pagination,
