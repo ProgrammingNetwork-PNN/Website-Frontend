@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import "./Landing.css";
 import Card from "@mui/material/Card";
@@ -24,10 +25,18 @@ const text =
 
 function Intro() {
     return (
-        <div className="bg">
-            <video className="video" autoPlay loop muted>
-                <source src={process.env.PUBLIC_URL + "/images/file.mp4"} />
-            </video>
+        <div
+            className="bg"
+            style={{ paddingTop: "15vmax", backgroundColor: "#fff" }}
+        >
+            <img
+                src={process.env.PUBLIC_URL + "/images/intro.png"}
+                className="video"
+                style={{
+                    width: "90%",
+                    height: "45%",
+                }}
+            ></img>
             <div className="text" style={{ color: "#222", textAlign: "left" }}>
                 P&N<p className="subTitle">{text}</p>
             </div>
@@ -169,9 +178,7 @@ function EtcPage() {
             {/*PNN PREMIUM*/}
             <div className="senpai">
                 <span className="imgText">
-                    <p className="tag" style={{ paddingTop: "2vmax" }}>
-                        PNN PREMIUM
-                    </p>
+                    <p className="tag">PNN PREMIUM</p>
                 </span>
                 <img
                     src={process.env.PUBLIC_URL + "/images/index.png"}
@@ -181,7 +188,11 @@ function EtcPage() {
 
                 <br />
                 <br />
-                <div className="iconGroup">
+                <img
+                    src={process.env.PUBLIC_URL + "/images/play/premium.png"}
+                    style={{ width: "24vmax", height: "100%" }}
+                />
+                {/* <div className="iconGroup">
                     <div className="item">
                         <MenuBookRoundedIcon style={{ fontSize: "8vmax" }} />
                         <p>전공 책 대여</p>
@@ -194,7 +205,7 @@ function EtcPage() {
                         <InventoryIcon style={{ fontSize: "8vmax" }} />
                         <p>편의 용품</p>
                     </div>
-                </div>
+                </div> */}
             </div>
             <br />
             <br />
@@ -206,19 +217,14 @@ function EtcPage() {
                     style={{ width: "22vmax", height: "4vmax" }}
                 ></img>
                 <span className="imgText">
-                    <p className="tag" style={{ paddingTop: "0.8vmax" }}>
-                        든든한 선배들
-                    </p>
+                    <p className="tag">든든한 선배들</p>
                 </span>
                 <br />
                 <br />
-                <div>
-                    <p># 교직과정_이수생_보유</p>
-                    <p># 인턴쉽_경험자_보유</p>
-                    <p># 인제대_맛집_전문가</p>
-                    <p># 같이_운동할_수_있는_헬창</p>
-                    <p># 항시_대기중인_각종_게임_유저</p>
-                </div>
+                <img
+                    src={process.env.PUBLIC_URL + "/images/play/senior.png"}
+                    style={{ width: "24vmax", height: "100%" }}
+                />
                 <br />
             </div>
         </div>

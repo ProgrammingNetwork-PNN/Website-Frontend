@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useState } from "react";
 import "./css/LandingMain.css";
 import "swiper/swiper.css";
@@ -87,8 +88,11 @@ function Semina() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
+                <br />
                 <p className="myPFont">{messages[0]}</p>
             </section>
+            <br />
+            <br />
             {/*전공 2*/}
             <section style={{ paddingTop: "2vmax" }}>
                 <div style={{ border: "0" }}>
@@ -117,8 +121,10 @@ function Semina() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
+                <br />
                 <p className="myPFont">{messages[1]}</p>
             </section>
+            <br />
             <br />
             <br />
             <br />
@@ -165,9 +171,13 @@ function Semina() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
+                <br />
                 <p className="myPFont">{messages[2]}</p>
             </section>
             {/*개발 2*/}
+            <br />
+            <br />
+            <br />
             <section style={{ paddingTop: "2vmax" }}>
                 <div style={{ border: "0" }}>
                     <div
@@ -214,7 +224,10 @@ function Semina() {
                     </Carousel>
                 </div>
                 <p className="myPFont">{messages[3]}</p>
+                <br />
             </section>
+            <br />
+            <br />
         </ScrollContainer>
     );
 }

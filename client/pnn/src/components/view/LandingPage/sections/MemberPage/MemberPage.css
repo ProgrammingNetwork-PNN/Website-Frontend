@@ -1,17 +1,46 @@
 .Rectangle{
     width: 10vmax;
     height: 2vmax;
-    background: #00264B;
     border-radius: 20px;
     line-height: 29px;
-    color: #FFF8F8;
-    
   }
-  /* Rectangle 32 */
+
   .RectText{
-    font-family: "Apple SD Gothic Neo";
     font-weight: 500;
     text-align: left;
     font-size: 1.5vmax;
     line-height: 36px;
+  }
+
+  .textField {
+  font-size: 2vmax;
+  font-weight: 900;
+  text-align: left;
+  }
+  .sub{
+    padding: 10px;
+    font-size: 1vmax;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .clubHeader{
+    color: red;
+     white-space : nowrap;
+  }
+
+  .member{
+    padding: 1vmax;
+    padding-top: 5vmax;
+    width: 80vmax;
+    height: 48vmax;
+    margin: auto;
+  }
+
+  @media (max-width: 767px) {
+    .member{
+      padding-top: 10vmax;
+      width: 48vmax;
+    height: 40vmax;
+    }
   }

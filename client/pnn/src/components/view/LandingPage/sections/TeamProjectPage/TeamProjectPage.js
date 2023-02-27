@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from "react";
 import "./Tpp.css";
 import "swiper/swiper.css";
@@ -42,7 +43,7 @@ function TeamProjectPage() {
                     style={{ fontSize: 30, margin: "auto" }}
                 >
                     <span style={{ fontSize: 28 }}>
-                        2017 학술제 1등작🥇
+                        2017 학술제&nbsp; 1등작🥇
                         <br />
                     </span>
                     <img
@@ -50,6 +51,7 @@ function TeamProjectPage() {
                             process.env.PUBLIC_URL + "/images/Team-skl/2017.png"
                         }
                         className="imgTeamProjet"
+                        alt="2017학술제"
                     ></img>
                     <br />
                     Inje Campus Life
@@ -66,7 +68,7 @@ function TeamProjectPage() {
                     style={{ fontSize: 30, margin: "auto" }}
                 >
                     <span style={{ fontSize: 28 }}>
-                        2018 학술제 1등작🥇
+                        2018 학술제&nbsp; 1등작🥇
                         <br />
                     </span>
                     <img
@@ -74,6 +76,7 @@ function TeamProjectPage() {
                             process.env.PUBLIC_URL + "/images/Team-skl/2018.png"
                         }
                         className="imgTeamProjetStudio"
+                        alt="2018학술제"
                     ></img>
                     <br />
                     P&N Studio
@@ -89,7 +92,7 @@ function TeamProjectPage() {
                     style={{ fontSize: 30, margin: "auto" }}
                 >
                     <span style={{ fontSize: 28 }}>
-                        2019 학술제 1등작🥇
+                        2019 학술제&nbsp; 1등작🥇
                         <br />
                     </span>
                     <img
@@ -97,6 +100,7 @@ function TeamProjectPage() {
                             process.env.PUBLIC_URL + "/images/Team-skl/2019.png"
                         }
                         className="imgTeamProjetStudio"
+                        alt="2019학술제"
                     ></img>
                     <br />
                     <div
@@ -120,7 +124,7 @@ function TeamProjectPage() {
                 >
                     <div>
                         <span style={{ fontSize: 28, height: "50%" + 50 }}>
-                            2022 학술제 1등작🥇
+                            2022 학술제&nbsp; 1등작🥇
                             <br />
                         </span>
                         <img
@@ -129,6 +133,7 @@ function TeamProjectPage() {
                                 "/images/Team-skl/2022.png"
                             }
                             className="imgTeamProjetStudio"
+                            alt="2022학술제"
                         ></img>
                         <br />
                         <div>P&N Shooter</div>
@@ -154,6 +159,7 @@ function TeamProjectPage() {
                             "/images/Team-skl/logoReact.png"
                         }
                         className="imgTeamLogo"
+                        alt="react"
                     />
                     <img
                         src={
@@ -161,6 +167,7 @@ function TeamProjectPage() {
                             "/images/Team-skl/logoSpring.png"
                         }
                         className="imgTeamLogos"
+                        alt="spring"
                     />
                     <img
                         src={
@@ -168,6 +175,7 @@ function TeamProjectPage() {
                             "/images/Team-skl/logoUnity.png"
                         }
                         className="imgTeamLogos"
+                        alt="unity"
                     />
                     <span style={{ fontSize: 25 }}>
                         <br />
@@ -181,6 +189,7 @@ function TeamProjectPage() {
                             "/images/Team-skl/logoNotion.png"
                         }
                         className="imgTeamLogo"
+                        alt="notion"
                     />
                     <img
                         src={
@@ -188,6 +197,7 @@ function TeamProjectPage() {
                             "/images/Team-skl/logoSlack.png"
                         }
                         className="imgTeamLogoslack"
+                        alt="slack"
                     />
                     <img
                         src={
@@ -195,6 +205,7 @@ function TeamProjectPage() {
                             "/images/Team-skl/logoGit.png"
                         }
                         className="imgTeamLogo"
+                        alt="git"
                     />
 
                     <span style={{ fontSize: 25 }}>

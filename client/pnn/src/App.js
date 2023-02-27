@@ -5,6 +5,7 @@ import GuestLandingPage from "./components/view/LandingPage/GuestLandingPage.js"
 import TeamProjectPage from "./components/view/LandingPage/sections/TeamProjectPage/TeamProjectPage.js";
 import SeminaPage from "./components/view/LandingPage/sections/SeminaPage/SeminaPage.js";
 import MemberPage from "./components/view/LandingPage/sections/MemberPage/MemberPage.js";
+import Footer from "./components/view/Footer/Footer";
 function App() {
     return (
         <div className="App">
@@ -19,6 +20,7 @@ function App() {
                 ></Route>
                 <Route path="/member" element={<MemberPage />}></Route>
             </Routes>
+            <Footer />
         </div>
     );
 }
