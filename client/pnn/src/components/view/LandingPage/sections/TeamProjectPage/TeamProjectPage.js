@@ -13,6 +13,7 @@ import {
     Sticky,
 } from "react-scroll-motion";
 import "swiper/css/navigation";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
 import "swiper/css/pagination";
 import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
@@ -32,7 +33,7 @@ function TeamProjectPage() {
                     )}
                 >
                     <div style={{ fontSize: 40 }}>
-                        P & N <hr></hr>프로젝트 소개
+                        P & N <hr style={{ height: "10px" }}></hr>프로젝트 소개
                     </div>
                 </Animator>
             </ScrollPage>
@@ -50,6 +51,7 @@ function TeamProjectPage() {
                         src={
                             process.env.PUBLIC_URL + "/images/Team-skl/2017.png"
                         }
+                        style={{ width: "16vmax", height: "22vmax" }}
                         className="imgTeamProjet"
                         alt="2017학술제"
                     ></img>
@@ -75,6 +77,7 @@ function TeamProjectPage() {
                         src={
                             process.env.PUBLIC_URL + "/images/Team-skl/2018.png"
                         }
+                        style={{ width: "28vmax", height: "20vmax" }}
                         className="imgTeamProjetStudio"
                         alt="2018학술제"
                     ></img>
@@ -134,6 +137,7 @@ function TeamProjectPage() {
                             }
                             className="imgTeamProjetStudio"
                             alt="2022학술제"
+                            style={{ width: "30vmax", height: "18vmax" }}
                         ></img>
                         <br />
                         <div>P&N Shooter</div>
@@ -146,7 +150,9 @@ function TeamProjectPage() {
             </ScrollPage>
             <ScrollPage>
                 <Animator animation={batch(Move(0, 800), Sticky(50, 30))}>
-                    <span style={{ fontSize: 30 }}>How build it?</span>
+                    <span style={{ fontSize: 30, fontWeight: 800 }}>
+                        How build it?
+                    </span>
                 </Animator>
             </ScrollPage>
             <ScrollPage>
@@ -177,12 +183,17 @@ function TeamProjectPage() {
                         className="imgTeamLogos"
                         alt="unity"
                     />
-                    <span style={{ fontSize: 25 }}>
+                    <span style={{ fontSize: 22 }}>
                         <br />
                         리액트 스프링 유니티를 활용한
                         <br /> 웹 앱 게임 개발
                     </span>
-                    <hr />
+
+                    <div
+                        style={{ paddingBottom: "3vmax", paddingTop: "3vmax" }}
+                    >
+                        <MoreVertIcon style={{ fontSize: "5vmax" }} />
+                    </div>
                     <img
                         src={
                             process.env.PUBLIC_URL +
@@ -208,10 +219,12 @@ function TeamProjectPage() {
                         alt="git"
                     />
 
-                    <span style={{ fontSize: 25 }}>
+                    <span style={{ fontSize: 22 }}>
                         <br />
-                        실무에서 활용되는 <br /> 노션 깃허브 슬랙를 통한 협업
+                        실무에서 활용되는 <br /> 노션 깃허브 슬랙을 통한 협업
                     </span>
+                    <br />
+                    <br />
                 </Animator>
             </ScrollPage>
         </ScrollContainer>
