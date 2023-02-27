@@ -40,8 +40,9 @@ function Semina() {
                         MoveOut(0, -400)
                     )}
                 >
-                    <div style={{ fontSize: 40 }}>
-                        P & N <hr></hr>세미나 소개
+                    <div style={{ fontSize: 36 }}>
+                        P & N <hr style={{ height: "10px" }}></hr>
+                        세미나&nbsp;소개
                     </div>
                 </Animator>
             </ScrollPage>
@@ -89,8 +90,13 @@ function Semina() {
                     </Carousel>
                 </div>
                 <br />
+                <br />
+                <br />
                 <p className="myPFont">{messages[0]}</p>
             </section>
+            <br />
+            <br />
+            <br />
             <br />
             <br />
             {/*전공 2*/}
@@ -122,14 +128,19 @@ function Semina() {
                     </Carousel>
                 </div>
                 <br />
+                <br />
+                <br />
                 <p className="myPFont">{messages[1]}</p>
             </section>
             <br />
             <br />
             <br />
             <br />
+            <br />
+            <br />
             <MoreVertIcon />
             <div className="seminarText">개발 세미나</div>
+            <br />
             {/*개발 1*/}
             <section style={{ paddingTop: "2vmax" }}>
                 <div style={{ border: "0" }}>
@@ -172,8 +183,12 @@ function Semina() {
                     </Carousel>
                 </div>
                 <br />
+                <br />
+                <br />
                 <p className="myPFont">{messages[2]}</p>
             </section>
+            <br />
+            <br />
             {/*개발 2*/}
             <br />
             <br />
@@ -223,6 +238,9 @@ function Semina() {
                         </Carousel.Item>
                     </Carousel>
                 </div>
+                <br />
+                <br />
+                <br />
                 <p className="myPFont">{messages[3]}</p>
                 <br />
             </section>

@@ -39,7 +39,7 @@ function MemberPage(props) {
                         )}
                     >
                         <div style={{ fontSize: 40 }}>
-                            P & N <hr></hr>
+                            P & N <hr style={{ height: "10px" }}></hr>
                             <p style={{ whiteSpace: "pre-wrap" }}>{text}</p>
                         </div>
                     </Animator>

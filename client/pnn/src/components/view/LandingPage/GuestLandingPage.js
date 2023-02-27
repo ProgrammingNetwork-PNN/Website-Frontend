@@ -9,11 +9,18 @@ import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useNavigate } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
-
-import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
-import TableRestaurantIcon from "@mui/icons-material/TableRestaurant";
-import InventoryIcon from "@mui/icons-material/Inventory";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+
+import {
+    Animator,
+    ScrollContainer,
+    ScrollPage,
+    batch,
+    Fade,
+    Move,
+    MoveOut,
+    Sticky,
+} from "react-scroll-motion";
 
 import "swiper/swiper.css";
 import "swiper/css/navigation";
@@ -50,7 +57,20 @@ function GuestLandingPage() {
     const [card] = useState(["semina", "team", "etc"]);
     return (
         <div>
-            <Intro></Intro>
+            <ScrollContainer>
+                <ScrollPage>
+                    <Animator
+                        animation={batch(
+                            Move(0, 500),
+                            Fade(),
+                            MoveOut(0, -400)
+                        )}
+                    >
+                        <Intro></Intro>
+                    </Animator>
+                </ScrollPage>
+            </ScrollContainer>
+
             <br />
             <br />
             <br />
@@ -80,8 +100,6 @@ function GuestLandingPage() {
                     </Grid>
                 </Box>
             </div>
-
-            {/*snap="mandatory"*/}
             <br />
             <br />
             <br />
@@ -175,6 +193,26 @@ function EtcPage() {
             <br />
             <br />
             <br />
+            {/*든든한 선배들(?)*/}
+            <div className="senpai">
+                <img
+                    src={process.env.PUBLIC_URL + "/images/index.png"}
+                    className="index"
+                    style={{ width: "22vmax", height: "4vmax" }}
+                ></img>
+                <span className="imgText">
+                    <p className="tag">든든한 선배들</p>
+                </span>
+                <br />
+                <br />
+                <img
+                    src={process.env.PUBLIC_URL + "/images/play/senior.png"}
+                    style={{ width: "24vmax", height: "100%" }}
+                />
+                <br />
+            </div>
+            <br />
+            <br />
             {/*PNN PREMIUM*/}
             <div className="senpai">
                 <span className="imgText">
@@ -206,26 +244,6 @@ function EtcPage() {
                         <p>편의 용품</p>
                     </div>
                 </div> */}
-            </div>
-            <br />
-            <br />
-            {/*든든한 선배들(?)*/}
-            <div className="senpai">
-                <img
-                    src={process.env.PUBLIC_URL + "/images/index.png"}
-                    className="index"
-                    style={{ width: "22vmax", height: "4vmax" }}
-                ></img>
-                <span className="imgText">
-                    <p className="tag">든든한 선배들</p>
-                </span>
-                <br />
-                <br />
-                <img
-                    src={process.env.PUBLIC_URL + "/images/play/senior.png"}
-                    style={{ width: "24vmax", height: "100%" }}
-                />
-                <br />
             </div>
         </div>
     );
