@@ -39,40 +39,38 @@ function GuestLandingPage() {
     const [card] = useState(["semina", "team", "etc"]);
     return (
         <div>
-            <ScrollContainer>
-                <Intro></Intro>
-                <br />
-                <br />
-                <br />
-                <p className="activity">Activity</p>
-                <EtcPage style={{ backgroundColor: "#ffffff" }} />
-                <div
-                    className="card"
-                    style={{ margin: "auto", backgroundColor: "transparent" }}
-                >
-                    <Box>
-                        <Grid container spacing={4}>
-                            {card.map((a, i) => {
-                                return (
-                                    <Grid item lg={4} md={4} xs={4} key={i}>
-                                        <GuestCard
-                                            cardTitle={cardTitle}
-                                            img={img}
-                                            i={i}
-                                        />
-                                    </Grid>
-                                );
-                            })}
-                        </Grid>
-                    </Box>
-                </div>
+            <Intro></Intro>
+            <br />
+            <br />
+            <br />
+            <p className="activity">Activity</p>
+            <EtcPage style={{ backgroundColor: "#ffffff" }} />
+            <div
+                className="card"
+                style={{ margin: "auto", backgroundColor: "transparent" }}
+            >
+                <Box>
+                    <Grid container spacing={4}>
+                        {card.map((a, i) => {
+                            return (
+                                <Grid item lg={4} md={4} xs={12} key={i}>
+                                    <GuestCard
+                                        cardTitle={cardTitle}
+                                        img={img}
+                                        i={i}
+                                    />
+                                </Grid>
+                            );
+                        })}
+                    </Grid>
+                </Box>
+            </div>
 
-                {/*snap="mandatory"*/}
-                <br />
-                <br />
-                <br />
-                <br />
-            </ScrollContainer>
+            {/*snap="mandatory"*/}
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
     );
 }
