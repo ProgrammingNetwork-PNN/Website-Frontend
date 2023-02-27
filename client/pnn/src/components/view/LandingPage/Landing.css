@@ -73,22 +73,6 @@ video {
   color: #222;
 }
 
-.Rectangle{
-  width: 10vmax;
-  height: 2vmax;
-  background: #00264B;
-  border-radius: 20px;
-  line-height: 29px;
-  color: #FFF8F8;
-}
-
-/* Rectangle 32 */
-.RectText{
-  font-weight: 500;
-  text-align: left;
-  font-size: 1.5vmax;
-  line-height: 36px;
-}
 
 
 @media(max-width:767px) {
