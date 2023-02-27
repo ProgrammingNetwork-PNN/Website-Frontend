@@ -193,6 +193,13 @@ function Semina() {
                         <Carousel.Item>
                             <img
                                 style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloGit.png`}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
                                 src={`${process.env.PUBLIC_URL}/images/logo/helloFigma.png`}
                                 alt="First slide"
                             />
