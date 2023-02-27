@@ -2,21 +2,23 @@ import React, { useState } from "react";
 import "./Landing.css";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import {
-    GroupsOutlined,
-    SchoolOutlined,
-    MoreHorizOutlined,
-} from "@mui/icons-material";
+import { GroupsOutlined, SchoolOutlined } from "@mui/icons-material";
 import { CardActionArea } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useNavigate } from "react-router-dom";
-import { ScrollContainer } from "react-scroll-motion";
 import Carousel from "react-bootstrap/Carousel";
 
 import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
 import TableRestaurantIcon from "@mui/icons-material/TableRestaurant";
 import InventoryIcon from "@mui/icons-material/Inventory";
+import PermIdentityIcon from "@mui/icons-material/PermIdentity";
+
+import "swiper/swiper.css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 const text =
     "Programming을 즐기는 Network라는 뜻을 가진 \n인제대학교 컴퓨터공학부 학술 동아리입니다.";
 
@@ -35,7 +37,7 @@ function Intro() {
 
 function GuestLandingPage() {
     const [img] = useState(["세미나.png", "coding.jpg", "onlineLecture.jpg"]);
-    const [cardTitle] = useState(["세미나", "팀프로젝트", "멤버 소개"]);
+    const [cardTitle] = useState(["세미나", "프로젝트", "멤버소개"]);
     const [card] = useState(["semina", "team", "etc"]);
     return (
         <div>
@@ -57,7 +59,7 @@ function GuestLandingPage() {
                     <Grid container spacing={4}>
                         {card.map((a, i) => {
                             return (
-                                <Grid item lg={8} md={6} xs={24} key={i}>
+                                <Grid item lg={4} md={6} xs={1.3} key={i}>
                                     <GuestCard
                                         cardTitle={cardTitle}
                                         img={img}
@@ -103,7 +105,7 @@ function GuestCard(props) {
                     <GroupsOutlined style={{ fontSize: "7vmax" }} />
                 ) : null}
                 {props.i === 2 ? (
-                    <MoreHorizOutlined style={{ fontSize: "7vmax" }} />
+                    <PermIdentityIcon style={{ fontSize: "7vmax" }} />
                 ) : null}
 
                 <CardContent>
