@@ -2,7 +2,7 @@
     "name": "pnn",
     "version": "0.1.0",
     "private": true,
-    "homepage": "https://inje-cs.github.io/pnn",
+    "homepage": "https://inje-pnn.github.io/web",
     "dependencies": {
         "@emotion/react": "^11.10.5",
         "@emotion/styled": "^11.10.5",
