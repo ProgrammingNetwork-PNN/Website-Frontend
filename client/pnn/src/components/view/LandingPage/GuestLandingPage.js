@@ -6,39 +6,17 @@ import {
     GroupsOutlined,
     SchoolOutlined,
     MoreHorizOutlined,
-    TagRounded
 } from "@mui/icons-material";
-//import RecordVoice, SpatialAudio
 import { CardActionArea } from "@mui/material";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import { useNavigate } from "react-router-dom";
-import {
-    Animator,
-    ScrollContainer,
-    ScrollPage,
-    batch,
-    MoveOut,
-    Sticky,
-    Fade,
-    FadeOut,
-    Move,
-} from "react-scroll-motion";
-
+import { ScrollContainer } from "react-scroll-motion";
 import Carousel from "react-bootstrap/Carousel";
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
 
-// import required modules
-import { Autoplay, Pagination, Navigation } from "swiper";
-import CardGroup from 'react-bootstrap/CardGroup';
-import Card2 from 'react-bootstrap/Card';
-import { height } from "@mui/system";
-
-
+import MenuBookRoundedIcon from "@mui/icons-material/MenuBookRounded";
+import TableRestaurantIcon from "@mui/icons-material/TableRestaurant";
+import InventoryIcon from "@mui/icons-material/Inventory";
 const text =
     "Programming을 즐기는 Network라는 뜻을 가진 \n인제대학교 컴퓨터공학부 학술 동아리입니다.";
 
@@ -48,13 +26,9 @@ function Intro() {
             <video className="video" autoPlay loop muted>
                 <source src={process.env.PUBLIC_URL + "/images/file.mp4"} />
             </video>
-            <div
-                className="text"
-                style={{ color: "#222", fontSize: "3rem", textAlign: "left" }}
-            >
+            <div className="text" style={{ color: "#222", textAlign: "left" }}>
                 P&N<p className="subTitle">{text}</p>
             </div>
-            <div className="text1">둘러보기 ▼</div>
         </div>
     );
 }
@@ -66,160 +40,182 @@ function GuestLandingPage() {
     return (
         <div>
             <ScrollContainer>
-            <Intro></Intro>
-            <EtcPage />
-            
+                <Intro></Intro>
+                <br />
+                <br />
+                <br />
+                <p className="activity">Activity</p>
+                <EtcPage style={{ backgroundColor: "#ffffff" }} />
+                <div
+                    className="card"
+                    style={{ margin: "auto", backgroundColor: "transparent" }}
+                >
+                    <Box>
+                        <Grid container spacing={4}>
+                            {card.map((a, i) => {
+                                return (
+                                    <Grid item lg={4} md={4} xs={4} key={i}>
+                                        <GuestCard
+                                            cardTitle={cardTitle}
+                                            img={img}
+                                            i={i}
+                                        />
+                                    </Grid>
+                                );
+                            })}
+                        </Grid>
+                    </Box>
+                </div>
+
                 {/*snap="mandatory"*/}
-                <></>
-                
-                               
-                <ScrollPage style={{height:3000}}>
-                    <Animator
-                        animation={batch(Move(),Fade(), Sticky(50,60), MoveOut(0, 0))}
-                    >
-
-                        <div className="card">
-                            <Box>
-                                <Grid container spacing={4}>
-                                    {card.map((a, i) => {
-                                        return (
-                                            <Grid
-                                                item
-                                                lg={4}
-                                                md={4}
-                                                xs={4}
-                                                key={i}
-                                            >
-                                                <GuestCard
-                                                    cardTitle={cardTitle}
-                                                    img={img}
-                                                    i={i}
-                                                />
-                                            </Grid>
-                                        );
-                                    })}
-                                </Grid>
-                            </Box>
-                        </div>
-                    </Animator>
-                </ScrollPage>
+                <br />
+                <br />
+                <br />
+                <br />
             </ScrollContainer>
-
         </div>
     );
 }
 
 export default GuestLandingPage;
 
-
 function GuestCard(props) {
-  let navigate = useNavigate();
-  return (
-    <Card sx={{ maxWidth: 700 }}>
-      <CardActionArea
-        onClick={() => {
-          if (props.i === 0) {
-            navigate("/semina");
-          } else if (props.i === 1) {
-            navigate("/teamProject");
-          } else if (props.i === 2){
-            navigate("/member");
-          } else {
-            navigate(
-              "/etc2"
-            );
-          }
-        }}
-      >
-        {props.i === 0 ? (
-          <SchoolOutlined style={{ fontSize: "7vmax" }} />
-        ) : null}
-        {props.i === 1 ? (
-          <GroupsOutlined style={{ fontSize: "7vmax" }} />
-        ) : null}
-        {props.i === 2 ? (
-          <MoreHorizOutlined style={{ fontSize: "7vmax" }} />
-        ) : null}
+    let navigate = useNavigate();
+    return (
+        <Card sx={{ maxWidth: 700 }}>
+            <CardActionArea
+                onClick={() => {
+                    if (props.i === 0) {
+                        navigate("/semina");
+                    } else if (props.i === 1) {
+                        navigate("/teamProject");
+                    } else if (props.i === 2) {
+                        navigate("/member");
+                    }
+                }}
+            >
+                {props.i === 0 ? (
+                    <SchoolOutlined style={{ fontSize: "7vmax" }} />
+                ) : null}
+                {props.i === 1 ? (
+                    <GroupsOutlined style={{ fontSize: "7vmax" }} />
+                ) : null}
+                {props.i === 2 ? (
+                    <MoreHorizOutlined style={{ fontSize: "7vmax" }} />
+                ) : null}
 
-        <CardContent>
-          <p className="cardTitle">{props.cardTitle[props.i]}</p>
-        </CardContent>
-      </CardActionArea>
-    </Card>
-  );
+                <CardContent>
+                    <p className="cardTitle">{props.cardTitle[props.i]}</p>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    );
 }
 
 function EtcPage() {
     return (
-        <div className="wrap" style={{ paddingLeft: "9vmax", paddingRight: "9vmax", }}>
-            <br />
-            <br />
-            <p className="activity">Activity</p>
-            <br></br>
-            <br></br>
-            <h1>오직 122-A에서만..!</h1>
-            <br />
-            <br />
-            <br></br>
-
+        <div className="wrap" style={{ backgroundColor: "transparent" }}>
+            {/*즐거운 대학생활*/}
             <div className="senpai">
-                <img 
-                src={process.env.PUBLIC_URL + "/images/index.png"} 
-                className="index" 
-                style={{width:"22vmax", height:"4vmax"}} >
+                <img
+                    src={process.env.PUBLIC_URL + "/images/index.png"}
+                    className="index"
+                    style={{ width: "22vmax", height: "4vmax" }}
+                ></img>
+                <span className="imgText">
+                    <p className="tag">즐거운 대학생활</p>
+                </span>
+                <br />
+                <br />
+                <Carousel fade Autoplay>
+                    <Carousel.Item>
+                        <img
+                            style={{ height: "20vmax", width: "30vmax" }}
+                            src={`${process.env.PUBLIC_URL}/images/play/pnnMT.jpg`}
+                            alt="Second slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            style={{ height: "20vmax", width: "30vmax" }}
+                            src={`${process.env.PUBLIC_URL}/images/play/pnnFire.png`}
+                            alt="First slide"
+                        />
+                    </Carousel.Item>
 
-                </img>
-                <span className="imgText"><img src={process.env.PUBLIC_URL + "/images/hash.png"} width={35} height={35}></img>&nbsp;든든한_선배들</span>
+                    <Carousel.Item>
+                        <img
+                            style={{ height: "20vmax", width: "30vmax" }}
+                            src={`${process.env.PUBLIC_URL}/images/play/pnnValley.png`}
+                            alt="Second slide"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            style={{ height: "20vmax", width: "30vmax" }}
+                            src={`${process.env.PUBLIC_URL}/images/play/pnnSki.png`}
+                            alt="Second slide"
+                        />
+                    </Carousel.Item>
+                </Carousel>
             </div>
-            <br></br><br></br>
+            <br />
+            <br />
+            <br />
+            {/*PNN PREMIUM*/}
             <div className="senpai">
-                <img 
-                src={process.env.PUBLIC_URL + "/images/index.png"} 
-                className="index" 
-                style={{width:"22vmax", height:"4vmax"}} >
+                <span className="imgText">
+                    <p className="tag" style={{ paddingTop: "2vmax" }}>
+                        PNN PREMIUM
+                    </p>
+                </span>
+                <img
+                    src={process.env.PUBLIC_URL + "/images/index.png"}
+                    className="index"
+                    style={{ width: "22vmax", height: "4vmax" }}
+                />
 
-                </img>
-                <span className="imgText"><img src={process.env.PUBLIC_URL + "/images/hash.png"} width={35} height={35}></img>&nbsp;걱정없는_대학생활</span>
+                <br />
+                <br />
+                <div className="iconGroup">
+                    <div className="item">
+                        <MenuBookRoundedIcon style={{ fontSize: "8vmax" }} />
+                        <p>전공 책 대여</p>
+                    </div>
+                    <div className="item">
+                        <TableRestaurantIcon style={{ fontSize: "8vmax" }} />
+                        <p>개인 자리</p>
+                    </div>
+                    <div className="item">
+                        <InventoryIcon style={{ fontSize: "8vmax" }} />
+                        <p>편의 용품</p>
+                    </div>
+                </div>
             </div>
-            <br></br><br></br>
+            <br />
+            <br />
+            {/*든든한 선배들(?)*/}
             <div className="senpai">
-                <img 
-                src={process.env.PUBLIC_URL + "/images/index.png"} 
-                className="index" 
-                style={{width:"22vmax", height:"4vmax"}} >
-
-                </img>
-                <span className="imgText"><img src={process.env.PUBLIC_URL + "/images/hash.png"} width={35} height={35}></img>&nbsp;PNN_PREMIUM</span>
-            </div>
-            <br></br><br></br>
-            
-            <div className="room">
-
-                {
-                    <CardGroup>
-                        <Card2>
-                            
-                            <Card2.Body>
-                                <Card2.Title className="description"></Card2.Title>
-                                <Card2.Text>
-                                   
-                                </Card2.Text>
-                            </Card2.Body>
-
-                        </Card2>
-                        <Card2>
-                            
-                            <Card2.Body>
-                                <Card2.Title></Card2.Title>
-                                <Card2.Text>
-                                
-                                </Card2.Text>
-                            </Card2.Body>
-                        </Card2>
-                    </CardGroup>
-                }
-
-
+                <img
+                    src={process.env.PUBLIC_URL + "/images/index.png"}
+                    className="index"
+                    style={{ width: "22vmax", height: "4vmax" }}
+                ></img>
+                <span className="imgText">
+                    <p className="tag" style={{ paddingTop: "0.8vmax" }}>
+                        든든한 선배들
+                    </p>
+                </span>
+                <br />
+                <br />
+                <div>
+                    <p># 교직과정_이수생_보유</p>
+                    <p># 인턴쉽_경험자_보유</p>
+                    <p># 인제대_맛집_전문가</p>
+                    <p># 같이_운동할_수_있는_헬창</p>
+                    <p># 항시_대기중인_각종_게임_유저</p>
+                </div>
+                <br />
             </div>
         </div>
     );

@@ -7,30 +7,15 @@ import {
     ScrollPage,
     batch,
     Fade,
-    FadeIn,
-    FadeOut,
     Move,
-    MoveIn,
     MoveOut,
     Sticky,
-    StickyIn,
-    StickyOut,
-    Zoom,
-    ZoomIn,
-    ZoomOut,
 } from "react-scroll-motion";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { RxDotFilled } from "react-icons/rx";
-import SwiperCore, {
-    Autoplay,
-    Pagination,
-    Navigation,
-    Scrollbar,
-} from "swiper";
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
 SwiperCore.use([Navigation, Pagination, Autoplay]);
 function TeamProjectPage() {
-    const FadeUp = batch(Fade(), Move(), Sticky());
     return (
         <ScrollContainer>
             <ScrollPage
