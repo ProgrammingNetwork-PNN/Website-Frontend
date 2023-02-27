@@ -47,13 +47,17 @@ function GuestLandingPage() {
             <EtcPage style={{ backgroundColor: "#ffffff" }} />
             <div
                 className="card"
-                style={{ margin: "auto", backgroundColor: "transparent" }}
+                style={{
+                    margin: "auto",
+                    backgroundColor: "transparent",
+                    display: "flex",
+                }}
             >
                 <Box>
                     <Grid container spacing={4}>
                         {card.map((a, i) => {
                             return (
-                                <Grid item lg={4} md={4} xs={12} key={i}>
+                                <Grid item lg={8} md={6} xs={24} key={i}>
                                     <GuestCard
                                         cardTitle={cardTitle}
                                         img={img}

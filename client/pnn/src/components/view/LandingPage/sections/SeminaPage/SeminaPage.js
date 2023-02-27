@@ -96,7 +96,7 @@ function Semina() {
                         <img
                             width="160vmax"
                             height="100vmax"
-                            src={`${process.env.PUBLIC_URL}/images/logo/java_logo.png`}
+                            src={`${process.env.PUBLIC_URL}/images/logo/Java_logo.png`}
                         />
                     </div>
 

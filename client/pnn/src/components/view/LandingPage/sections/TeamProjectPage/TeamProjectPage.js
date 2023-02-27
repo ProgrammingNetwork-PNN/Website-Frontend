@@ -47,7 +47,7 @@ function TeamProjectPage() {
                     </span>
                     <img
                         src={
-                            process.env.PUBLIC_URL + "/images/team-skl/2017.png"
+                            process.env.PUBLIC_URL + "/images/Team-skl/2017.png"
                         }
                         className="imgTeamProjet"
                     ></img>
@@ -71,7 +71,7 @@ function TeamProjectPage() {
                     </span>
                     <img
                         src={
-                            process.env.PUBLIC_URL + "/images/team-skl/2018.png"
+                            process.env.PUBLIC_URL + "/images/Team-skl/2018.png"
                         }
                         className="imgTeamProjetStudio"
                     ></img>
@@ -94,7 +94,7 @@ function TeamProjectPage() {
                     </span>
                     <img
                         src={
-                            process.env.PUBLIC_URL + "/images/team-skl/2019.png"
+                            process.env.PUBLIC_URL + "/images/Team-skl/2019.png"
                         }
                         className="imgTeamProjetStudio"
                     ></img>
@@ -126,7 +126,7 @@ function TeamProjectPage() {
                         <img
                             src={
                                 process.env.PUBLIC_URL +
-                                "/images/team-skl/2022.png"
+                                "/images/Team-skl/2022.png"
                             }
                             className="imgTeamProjetStudio"
                         ></img>
@@ -151,21 +151,21 @@ function TeamProjectPage() {
                     <img
                         src={
                             process.env.PUBLIC_URL +
-                            "/images/team-skl/logoReact.png"
+                            "/images/Team-skl/logoReact.png"
                         }
                         className="imgTeamLogo"
                     />
                     <img
                         src={
                             process.env.PUBLIC_URL +
-                            "/images/team-skl/logoSpring.png"
+                            "/images/Team-skl/logoSpring.png"
                         }
                         className="imgTeamLogos"
                     />
                     <img
                         src={
                             process.env.PUBLIC_URL +
-                            "/images/team-skl/logoUnity.png"
+                            "/images/Team-skl/logoUnity.png"
                         }
                         className="imgTeamLogos"
                     />
@@ -178,21 +178,21 @@ function TeamProjectPage() {
                     <img
                         src={
                             process.env.PUBLIC_URL +
-                            "/images/team-skl/logoNotion.png"
+                            "/images/Team-skl/logoNotion.png"
                         }
                         className="imgTeamLogo"
                     />
                     <img
                         src={
                             process.env.PUBLIC_URL +
-                            "/images/team-skl/logoSlack.png"
+                            "/images/Team-skl/logoSlack.png"
                         }
                         className="imgTeamLogoslack"
                     />
                     <img
                         src={
                             process.env.PUBLIC_URL +
-                            "/images/team-skl/logoGit.png"
+                            "/images/Team-skl/logoGit.png"
                         }
                         className="imgTeamLogo"
                     />
