@@ -22,11 +22,6 @@ const darkTheme = createTheme({
 });
 
 function DrawerAppBar(props) {
-    const { window } = props;
-
-    const container =
-        window !== undefined ? () => window().document.body : undefined;
-
     return (
         <nav>
             <Box sx={{ display: "flex" }}>
@@ -80,13 +75,5 @@ function DrawerAppBar(props) {
         </nav>
     );
 }
-
-DrawerAppBar.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-};
 
 export default DrawerAppBar;

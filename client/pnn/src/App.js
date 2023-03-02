@@ -1,4 +1,5 @@
 import "./App.css";
+import { useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import NavBar from "./components/view/NavBar/NavBar.js";
 import GuestLandingPage from "./components/view/LandingPage/GuestLandingPage.js";
@@ -7,6 +8,14 @@ import SeminaPage from "./components/view/LandingPage/sections/SeminaPage/Semina
 import MemberPage from "./components/view/LandingPage/sections/MemberPage/MemberPage.js";
 import Footer from "./components/view/Footer/Footer";
 function App() {
+    function setScreenSize() {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
+    }
+    useEffect(() => {
+        setScreenSize();
+    });
+
     return (
         <div className="App">
             <NavBar></NavBar>
