@@ -1,7 +1,3 @@
-@font-face {
-    font-family: "Apple SD Gothic Neo";
-    src: url('../../../../public/font/Apple\ SD\ Gothic\ Neo\ Bold.ttf');
-}
 html {
 		font-size: 18pt;
 		font-size: 1vmax;
@@ -22,32 +18,34 @@ html {
     font-size: 2vmax;
 }
 .activity{
-    font-family: "Apple SD Gothic Neo";
     text-align: center;
+    vertical-align: auto;
     font-size: 1.5vmax;
+    font-weight: 900;
     text-decoration: underline;
     text-underline-position: under;
 }
 
+.iconGroup{
+  display: flex;
+  justify-content : center;
+}
+.iconGroup .item {
+  font-size: 1.3vmax;
+  padding-left: 8vmax;
+  padding-right: 8vmax;
+  float: left;
+  
+}
+
 .card{
-    width: 150vh;
-    padding-left: 4vh;
-    padding-right: 4vh;
+    border: none;
+    background-color: #ffffff;
+    background-color: transparent;
+    margin: auto;
+    width: 50vmax;
 }
 
-
-.main-bg {
-  height: 300px;
-  background-image: url('../../../../public/images/세미나.png'); /*이미지 주소 넣고*/ 
-  background-size: cover; /*이미지 사이즈 조정해주고*/
-  background-position: center; /*이미지 정렬 해주고*/
-}
-
-.bg {
-  width: 100%;
-  overflow: hidden;
-  margin: 0px auto;
-}
 video {
   width: 100%;
   height: 100%;
@@ -55,6 +53,8 @@ video {
 
 .text {
   position: absolute;
+  font-size: 3vmax;
+  font-weight: 700;
   width: 100%;
   top: 10%;
   left: 0%;
@@ -62,11 +62,9 @@ video {
   letter-spacing: 3.5px;
   transform: translate(0%,0%);
   
-  font-family: "Apple SD Gothic Neo";
 }
 
 .cardTitle{
-    font-family: "Apple SD Gothic Neo";
     text-align: center;
     font-size: 2vmax;
 }
@@ -75,39 +73,8 @@ video {
   text-align: left;
   font-size: 1.5vmax;
   color: #222;
-  font-family: "Apple SD Gothic Neo";
 }
 
-.text1 {
-  color: #222;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  top: 85%;
-  left: 0%;
-  font-size: 1.5vmax;
-  font-family: "Apple SD Gothic Neo";
-}
-
-
-
-
-.Rectangle{
-  width: 10vmax;
-  height: 2vmax;
-  background: #00264B;
-  border-radius: 20px;
-  line-height: 29px;
-  color: #FFF8F8;
-}
-/* Rectangle 32 */
-.RectText{
-  font-family: "Apple SD Gothic Neo";
-  font-weight: 500;
-  text-align: left;
-  font-size: 1.5vmax;
-  line-height: 36px;
-}
 
 
 @media(max-width:767px) {
@@ -117,17 +84,89 @@ video {
   video {
     height: 100%;
   }
+  .card{
+    width: 40vmax;
+}
   .text {
-    top: 5%
+    top: 7%;
+    font-size: 2.5vmax;
   }
   .text p {
-    font-size: 24px;
+    font-size: 1.2vmax;
   }
-  .text1 {
-    top: 35%;
+  .iconGroup{
+  display: flex;
+  margin: 0 auto;
+  justify-content : center;
   }
-  .card{
-    
-    width: 40vh 
+.iconGroup .item {
+  font-size: 1.3vmax;
+  font-weight: 550;
+  padding-left: 4vmax;
+  padding-right: 4vmax;
   }
+}
+
+.wrap {
+  margin: 50px auto;
+  padding-left: 9vmax;
+  padding-right: 9vmax;
+  white-space: pre-wrap;
+  background: #f8f8f8;
+  z-index: -100;
+}
+.senpai {
+  font-size: 1.3vmax;
+  background: none;
+  position: relative;
+}
+
+.tag{
+  font-size: 1.5vmax;
+  font-weight: 600;
+}
+
+h1 {
+  color: Black !important;
+}
+
+.index {
+	vertical-align: middle;
+}
+
+.imgText{
+  text-align: center;
+	position: absolute;
+	top: 10%;
+	left: 50%;
+	transform: translate( -50%, -50% );
+}
+/* 
+.title {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+  text-shadow: -1px 2px skyblue, 0px 1px skyblue, 1px 0px skyblue, 0px 0px skyblue;
+  border-radius: 50%;
+} */
+
+.swiper {
+  width: 100%;
+  height: 90%;
+  padding-top: 50px;
+  padding-bottom: 0px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover !important;
 }

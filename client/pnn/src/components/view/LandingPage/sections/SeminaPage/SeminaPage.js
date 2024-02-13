@@ -1,74 +1,253 @@
+/* eslint-disable */
 import React, { useState } from "react";
-import "./css/fontawesome-all.min.css";
 import "./css/LandingMain.css";
-import "./css/noscript.css";
-import { useHorizontalScroll } from "./useSideScroll";
+import "swiper/swiper.css";
+import Carousel from "react-bootstrap/Carousel";
+import {
+    Animator,
+    ScrollContainer,
+    ScrollPage,
+    batch,
+    Fade,
+    Move,
+    MoveOut,
+    Sticky,
+} from "react-scroll-motion";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import SwiperCore, { Autoplay, Pagination, Navigation } from "swiper";
+SwiperCore.use([Navigation, Pagination, Autoplay]);
 
 function Semina() {
-  const scrollRef = useHorizontalScroll();
-  const [messages] = useState([
-    "C/C++ 세미나를 통하여 신입생분들의\n프로그래밍 적응과 기초를 쌓아갈 수 있습니다.",
-    "자바 세미나를 통하여 2학년 부원들의\n객체지향 프로그래밍 실력을 쌓아갈 수 있습니다.",
-    "DB 세미나를 통하여 데이터베이스의\n설계와 기초원리를 배울 수 있습니다.",
-  ]);
-  return (
-    <div className="is-preload" ref={scrollRef} style={{ overflow: "auto" }}>
-      <div id="page-wrapper">
-        <div id="wrapper">
-          <section className="panel banner right">
-            <div className="content color0 span-3-75">
-              <h1 className="major">
-                P&N <br />
-                Seminar
-              </h1>
-            </div>
-          </section>
+    const [messages] = useState([
+        "C/C++ 세미나를 통하여 신입생분들의\n프로그래밍 적응과 기초를 쌓아갈 수 있습니다.",
+        "자바 세미나를 통하여 2학년 부원들의\n객체지향 프로그래밍 실력을 쌓아갈 수 있습니다.",
+        "DB 세미나를 통하여 데이터베이스의\n설계와 기초원리를 배울 수 있습니다.",
+        "협업툴의 세미나를 통하여\n개발자의 기본 소양을 쌓아갑니다.",
+    ]);
+    return (
+        <ScrollContainer>
+            <ScrollPage
+                style={{ backgroundColor: "cornflowerblue", color: "white" }}
+            >
+                <a name="test" />
+                <Animator
+                    animation={batch(
+                        Move(0, 500),
+                        Fade(),
+                        Sticky(50, 50),
+                        MoveOut(0, -400)
+                    )}
+                >
+                    <div style={{ fontSize: 36 }}>
+                        P & N <hr style={{ height: "10px" }}></hr>
+                        세미나&nbsp;소개
+                    </div>
+                </Animator>
+            </ScrollPage>
 
-          {/*****************************1******************************/}
-          <section className="panel spotlight medium left">
-            <div className="content span-7">
-              <h2 className="major">C/C++ Seminar</h2>
-              <img
-                width="469px"
-                height="350px"
-                src={`${process.env.PUBLIC_URL}/images/seminar1.png`}
-              ></img>
-            </div>
-            <div className="image filtered tinted"></div>
-            <p className="myPFont">{messages[0]}</p>
-          </section>
-          {/*****************************2******************************/}
-          <section className="panel spotlight medium left">
-            <div className="content span-7">
-              <h2 className="major">JAVA Seminar</h2>
-              <img
-                width="469px"
-                height="350px"
-                src={`${process.env.PUBLIC_URL}/images/seminar2.png`}
-              ></img>
-            </div>
-            <div className="image filtered tinted" data-position="top "></div>
-            <p className="myPFont">{messages[1]}</p>
-          </section>
-          {/*****************************3******************************/}
-          <section className="panel spotlight medium left">
-            <div className="content span-6">
-              <h2 className="major">DB Seminar</h2>
-              <img
-                width="469px"
-                height="350px"
-                src={`${process.env.PUBLIC_URL}/images/seminar3.png`}
-              ></img>
-            </div>
-            <div className="image filtered tinted" data-position="top "></div>
-            <p className="myPFont">{messages[2]}</p>
-          </section>
+            <div className="seminarText">전공 세미나</div>
+            {/*전공 1*/}
+            <section style={{ paddingTop: "2vmax" }}>
+                <div style={{ border: "0" }}>
+                    <div style={{ paddingBottom: "2vmax" }}>
+                        <img
+                            width="100vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/c_logo.png`}
+                        />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img
+                            width="100vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/cpp_logo.png`}
+                        />
+                    </div>
 
-          <section style={{ paddingLeft: "20px" }}></section>
-        </div>
-      </div>
-    </div>
-  );
+                    <Carousel fade Autoplay>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloC.png`}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloCPP.png`}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/seminar1.png`}
+                                alt="Third slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                </div>
+                <br />
+                <br />
+                <br />
+                <p className="myPFont">{messages[0]}</p>
+            </section>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            {/*전공 2*/}
+            <section style={{ paddingTop: "2vmax" }}>
+                <div style={{ border: "0" }}>
+                    <div style={{ paddingBottom: "2vmax" }}>
+                        <img
+                            width="160vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/Java_logo.png`}
+                        />
+                    </div>
+
+                    <Carousel fade Autoplay>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloJAVA.png`}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/seminar2.png`}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                </div>
+                <br />
+                <br />
+                <br />
+                <p className="myPFont">{messages[1]}</p>
+            </section>
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <br />
+            <MoreVertIcon />
+            <div className="seminarText">개발 세미나</div>
+            <br />
+            {/*개발 1*/}
+            <section style={{ paddingTop: "2vmax" }}>
+                <div style={{ border: "0" }}>
+                    <div style={{ paddingBottom: "2vmax" }}>
+                        <img
+                            width="178vmax"
+                            height="70vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/mongo_logo.png`}
+                        />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img
+                            width="150vmax"
+                            height="80vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/mysql_logo.png`}
+                            style={{ paddingBottom: "0.75vmax" }}
+                        />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <img
+                            width="150vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/oracle_logo.png`}
+                        />
+                    </div>
+
+                    <Carousel fade Autoplay>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloDB.png`}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/seminar3.png`}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                </div>
+                <br />
+                <br />
+                <br />
+                <p className="myPFont">{messages[2]}</p>
+            </section>
+            <br />
+            <br />
+            {/*개발 2*/}
+            <br />
+            <br />
+            <br />
+            <section style={{ paddingTop: "2vmax" }}>
+                <div style={{ border: "0" }}>
+                    <div
+                        style={{
+                            paddingBottom: "2vmax",
+                            paddingRight: "1vmax",
+                        }}
+                    >
+                        <img
+                            width="200vmax"
+                            height="100vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/github_logo.png`}
+                        />
+                        &nbsp;&nbsp;&nbsp;&nbsp;
+                        <img
+                            width="100vmax"
+                            height="120vmax"
+                            src={`${process.env.PUBLIC_URL}/images/logo/figma_logo.png`}
+                        />
+                    </div>
+
+                    <Carousel fade Autoplay>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloGit.png`}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/helloFigma.png`}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                style={{ height: "20vmax", width: "30vmax" }}
+                                src={`${process.env.PUBLIC_URL}/images/logo/toolSeminar.jpg`}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                </div>
+                <br />
+                <br />
+                <br />
+                <p className="myPFont">{messages[3]}</p>
+                <br />
+            </section>
+            <br />
+            <br />
+        </ScrollContainer>
+    );
 }
 
 export default Semina;
